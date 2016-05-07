@@ -14,6 +14,10 @@
 		453B4EE41CDE3F0A00BFB901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453B4EE21CDE3F0A00BFB901 /* LaunchScreen.storyboard */; };
 		453B4EEF1CDE3F0A00BFB901 /* PMAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4EEE1CDE3F0A00BFB901 /* PMAlertControllerTests.swift */; };
 		453B4EFA1CDE3F0A00BFB901 /* PMAlertControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4EF91CDE3F0A00BFB901 /* PMAlertControllerUITests.swift */; };
+		453B4F121CDE52EA00BFB901 /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4F111CDE52EA00BFB901 /* PMAlertAction.swift */; };
+		453B4F131CDE53FF00BFB901 /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4F0C1CDE411100BFB901 /* PMAlertController.swift */; };
+		453B4F141CDE540400BFB901 /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453B4F0D1CDE411100BFB901 /* PMAlertController.xib */; };
+		453B4F151CDE7B6700BFB901 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 453B4EE51CDE3F0A00BFB901 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,9 @@
 		453B4EF51CDE3F0A00BFB901 /* PMAlertControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMAlertControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		453B4EF91CDE3F0A00BFB901 /* PMAlertControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMAlertControllerUITests.swift; sourceTree = "<group>"; };
 		453B4EFB1CDE3F0A00BFB901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453B4F0C1CDE411100BFB901 /* PMAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertController.swift; sourceTree = "<group>"; };
+		453B4F0D1CDE411100BFB901 /* PMAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMAlertController.xib; sourceTree = "<group>"; };
+		453B4F111CDE52EA00BFB901 /* PMAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +84,7 @@
 		453B4ECD1CDE3F0A00BFB901 = {
 			isa = PBXGroup;
 			children = (
+				453B4F091CDE3F9A00BFB901 /* Library */,
 				453B4ED81CDE3F0A00BFB901 /* PMAlertController */,
 				453B4EED1CDE3F0A00BFB901 /* PMAlertControllerTests */,
 				453B4EF81CDE3F0A00BFB901 /* PMAlertControllerUITests */,
@@ -123,6 +131,16 @@
 				453B4EFB1CDE3F0A00BFB901 /* Info.plist */,
 			);
 			path = PMAlertControllerUITests;
+			sourceTree = "<group>";
+		};
+		453B4F091CDE3F9A00BFB901 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				453B4F0C1CDE411100BFB901 /* PMAlertController.swift */,
+				453B4F0D1CDE411100BFB901 /* PMAlertController.xib */,
+				453B4F111CDE52EA00BFB901 /* PMAlertAction.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +247,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453B4F151CDE7B6700BFB901 /* Info.plist in Resources */,
 				453B4EE41CDE3F0A00BFB901 /* LaunchScreen.storyboard in Resources */,
 				453B4EE11CDE3F0A00BFB901 /* Assets.xcassets in Resources */,
 				453B4EDF1CDE3F0A00BFB901 /* Main.storyboard in Resources */,
+				453B4F141CDE540400BFB901 /* PMAlertController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				453B4EDC1CDE3F0A00BFB901 /* ViewController.swift in Sources */,
+				453B4F121CDE52EA00BFB901 /* PMAlertAction.swift in Sources */,
 				453B4EDA1CDE3F0A00BFB901 /* AppDelegate.swift in Sources */,
+				453B4F131CDE53FF00BFB901 /* PMAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
