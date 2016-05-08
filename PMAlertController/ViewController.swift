@@ -40,11 +40,21 @@ class ViewController: UIViewController {
         
       //  self.presentViewController(alertController, animated: true, completion: nil)
         
-        let alert = PMAlertController(title: "ciao", description: "questo è un messaggio", image: nil)
+        let alertVC = PMAlertController(title: "ciao", description: "questo è un messaggio", image: nil)
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        alertVC.addAction(PMAlertAction(title: "Button1", style: PMAlertActionStyle.Default, handler: { (alert) in
+            
+        }))
         
-        //alert.alertTitle("Questo è il mio titolo")
+        alertVC.addAction(PMAlertAction(title: "Button2", style: PMAlertActionStyle.Default, handler: { (alert) in
+            
+        }))
+        
+        alertVC.addAction(PMAlertAction(title: "Button3", style: PMAlertActionStyle.Cancel, handler: { (alert) in
+           
+        }))
+        
+        self.presentViewController(alertVC, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

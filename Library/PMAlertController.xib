@@ -7,10 +7,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMAlertController" customModule="PMAlertController" customModuleProvider="target">
             <connections>
+                <outlet property="alertActionStackView" destination="WJc-5g-auJ" id="6ho-4f-C1R"/>
                 <outlet property="alertDescription" destination="BaL-rf-G7t" id="oA9-n7-8tS"/>
                 <outlet property="alertImage" destination="Rwc-nf-sc4" id="9c2-Rv-Z2W"/>
                 <outlet property="alertImageHeightConstraint" destination="whE-Aq-Gb6" id="Rfx-Op-WWg"/>
                 <outlet property="alertMaskBackground" destination="QvX-0K-co6" id="U8C-Dt-d5N"/>
+                <outlet property="alertStackViewHeightConstraint" destination="sZH-1X-biu" id="air-m7-rmW"/>
                 <outlet property="alertTitle" destination="boW-P6-B3N" id="Q1I-HI-El2"/>
                 <outlet property="alertView" destination="dEl-s8-6vU" id="sSB-hF-osA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -26,7 +28,7 @@
                     <color key="backgroundColor" white="0.33333333333333331" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-s8-6vU">
-                    <rect key="frame" x="18" y="140" width="564" height="320"/>
+                    <rect key="frame" x="18" y="141" width="564" height="318"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-nf-sc4">
                             <rect key="frame" x="0.0" y="0.0" width="564" height="188"/>
@@ -51,12 +53,13 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="cg8-6J-yzj"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-5g-auJ">
-                            <rect key="frame" x="0.0" y="258" width="564" height="62"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-5g-auJ">
+                            <rect key="frame" x="0.0" y="258" width="564" height="60"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="62" id="sZH-1X-biu"/>
+                                <constraint firstAttribute="height" constant="60" id="sZH-1X-biu"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -68,7 +71,7 @@
                         <constraint firstItem="boW-P6-B3N" firstAttribute="top" secondItem="Rwc-nf-sc4" secondAttribute="bottom" constant="10" id="CfL-8C-VDW"/>
                         <constraint firstAttribute="trailing" secondItem="BaL-rf-G7t" secondAttribute="trailing" constant="8" id="DOm-G9-Two"/>
                         <constraint firstAttribute="bottom" secondItem="WJc-5g-auJ" secondAttribute="bottom" id="P7Y-tt-2D9"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="PzO-yc-cQ1"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="PzO-yc-cQ1"/>
                         <constraint firstItem="WJc-5g-auJ" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Qvh-W5-xGk"/>
                         <constraint firstAttribute="trailing" secondItem="boW-P6-B3N" secondAttribute="trailing" constant="8" id="SND-Z1-FOC"/>
                         <constraint firstItem="boW-P6-B3N" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="WdL-bT-Fz2"/>
