@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             
         }))
         
-//        alertVC.addAction(PMAlertAction(title: "Button2", style: PMAlertActionStyle.Default, handler: { (alert) in
+//        alertVC.addAction(PMAlertAction(title: "No Thanks", style: PMAlertActionStyle.Default, handler: { (alert) in
 //            
 //        }))
         
