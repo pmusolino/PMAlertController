@@ -24,8 +24,9 @@ public class PMAlertAction: UIButton {
         self.init()
         
         self.setTitle(title, forState: UIControlState.Normal)
+        self.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 17)
         
-         style == .Default ? (self.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)) : (self.setTitleColor(UIColor(red: 191, green: 45, blue: 96, alpha: 1.0), forState: UIControlState.Normal))
+         style == .Default ? (self.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)) : (self.setTitleColor(UIColor.lightGrayColor().colorWithAlphaComponent(0.5), forState: UIControlState.Normal))
        
         func callClosure() {
             
@@ -41,7 +42,7 @@ public class PMAlertAction: UIButton {
     
     
     private func addSeparator(){
-        separator.backgroundColor = UIColor(red: 204, green: 209, blue: 205, alpha: 1)
+        separator.backgroundColor = UIColor.lightGrayColor()
         self.addSubview(separator)
         
         // Autolayout separator

@@ -40,19 +40,23 @@ class ViewController: UIViewController {
         
       //  self.presentViewController(alertController, animated: true, completion: nil)
         
-        let alertVC = PMAlertController(title: "ciao", description: "questo è un messaggio", image: nil)
+        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png")) //Image by freepik.com, taken on flaticon.com
         
-        alertVC.addAction(PMAlertAction(title: "Button1", style: PMAlertActionStyle.Default, handler: { (alert) in
+        
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: PMAlertActionStyle.Cancel, handler: { (alert) in
             
         }))
         
-        alertVC.addAction(PMAlertAction(title: "Button2", style: PMAlertActionStyle.Default, handler: { (alert) in
+        
+        alertVC.addAction(PMAlertAction(title: "Allow", style: PMAlertActionStyle.Default, handler: { (alert) in
             
         }))
         
-        alertVC.addAction(PMAlertAction(title: "Button3", style: PMAlertActionStyle.Cancel, handler: { (alert) in
-           
-        }))
+//        alertVC.addAction(PMAlertAction(title: "Button2", style: PMAlertActionStyle.Default, handler: { (alert) in
+//            
+//        }))
+        
+        
         
         self.presentViewController(alertVC, animated: true, completion: nil)
     }

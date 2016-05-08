@@ -30,11 +30,14 @@ public class PMAlertController: UIViewController {
         self.view = nib[0] as! UIView
         
         self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-        
+        self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
     
-        (image != nil) ? (self.alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
-        self.alertTitle.text = title
-        self.alertDescription.text = description
+        alertView.layer.cornerRadius = 5
+        (image != nil) ? (alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
+        alertTitle.text = title
+        alertDescription.text = description
+        
+        setShadowAlertView()
     }
     
     public func addAction(action: PMAlertAction){
@@ -49,4 +52,10 @@ public class PMAlertController: UIViewController {
         }
     }
     
+    private func setShadowAlertView(){
+        alertView.layer.masksToBounds = false
+        alertView.layer.shadowOffset = CGSizeMake(0, 0)
+        alertView.layer.shadowRadius = 8
+        alertView.layer.shadowOpacity = 0.3
+    }
 }
