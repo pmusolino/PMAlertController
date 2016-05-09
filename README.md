@@ -73,8 +73,8 @@ alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () ->
             print("Capture action Cancel")
         }))
         
-alertVC.addAction(PMAlertAction(title: "Allow", style: .Default, action: { () in
-            print("Capture action Allow")
+alertVC.addAction(PMAlertAction(title: "OK", style: .Default, action: { () in
+            print("Capture action OK")
         }))
         
 self.presentViewController(alertVC, animated: true, completion: nil)
