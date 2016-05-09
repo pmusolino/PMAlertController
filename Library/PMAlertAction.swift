@@ -16,30 +16,30 @@ public enum PMAlertActionStyle : Int {
 
 public class PMAlertAction: UIButton {
     
-    typealias CompletionHandler = ((PMAlertAction) -> Void)?
+    private var action: (() -> Void)?
     
     var separator = UIImageView()
     
-    public convenience init(title: String?, style: PMAlertActionStyle, handler: ((PMAlertAction) -> Void)?){
+    public convenience init(title: String?, style: PMAlertActionStyle, action: (() -> Void)? = nil){
+        
         self.init()
+        
+        self.action = action
+        self.addTarget(self, action: #selector(PMAlertAction.tapped(_:)), forControlEvents: .TouchUpInside)
+        
         
         self.setTitle(title, forState: UIControlState.Normal)
         self.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 17)
         
-         style == .Default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), forState: UIControlState.Normal)) : (self.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal))
-       
-        func callClosure() {
-            
-            handler!(self)
-            
-        }
-        
-        self.addTarget(self, action: Selector(callClosure()), forControlEvents: .TouchUpInside)
-        
+        style == .Default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), forState: UIControlState.Normal)) : (self.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal))
         
         self.addSeparator()
+        
     }
     
+    func tapped(sender: PMAlertAction) {
+        self.action?()
+    }
     
     private func addSeparator(){
         separator.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.2)
@@ -55,7 +55,5 @@ public class PMAlertAction: UIButton {
             self.layoutMarginsGuide.trailingAnchor, constant: -8).active = true
         separator.heightAnchor.constraintEqualToConstant(1).active = true
     }
-    
-    
     
 }

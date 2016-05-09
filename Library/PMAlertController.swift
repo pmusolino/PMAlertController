@@ -21,7 +21,6 @@ public class PMAlertController: UIViewController {
     @IBOutlet weak var alertStackViewHeightConstraint: NSLayoutConstraint!
     var ALERT_STACK_VIEW_HEIGHT : CGFloat = 62
     
-   // private var actions : [PMAlertAction] = []
     
     public convenience init(title: String, description: String, image: UIImage?) {
         self.init()
@@ -40,8 +39,8 @@ public class PMAlertController: UIViewController {
         setShadowAlertView()
     }
     
-    public func addAction(action: PMAlertAction){
-        alertActionStackView.addArrangedSubview(action)
+    public func addAction(alertAction: PMAlertAction){
+        alertActionStackView.addArrangedSubview(alertAction)
         
         if alertActionStackView.arrangedSubviews.count > 2{
             alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
@@ -50,6 +49,13 @@ public class PMAlertController: UIViewController {
         else{
             alertActionStackView.axis = .Horizontal
         }
+        
+        alertAction.addTarget(self, action: #selector(PMAlertController.dismissAlertController(_:)), forControlEvents: .TouchUpInside)
+        
+    }
+    
+    func dismissAlertController(sender: PMAlertAction){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func setShadowAlertView(){

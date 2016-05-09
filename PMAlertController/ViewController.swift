@@ -17,46 +17,21 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-//        let alertController =  UIAlertController(title: "IBI16", message: "Ciao", preferredStyle: UIAlertControllerStyle.Alert)
-//        
-//        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action) -> Void in
-//            //completion()
-//        }
-//        let okAction2 = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action) -> Void in
-//            //completion()
-//        }
-//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
-//            //cancel()
-//        }
-//        
-//        let cancelAction2 = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Destructive) { (action) -> Void in
-//            //cancel()
-//        }
-//        
-//        alertController.addAction(okAction)
-//        alertController.addAction(okAction2)
-//        alertController.addAction(cancelAction)
-//        alertController.addAction(cancelAction2)
-        
-      //  self.presentViewController(alertController, animated: true, completion: nil)
-        
         let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png")) //Image by freepik.com, taken on flaticon.com
         
         
-        alertVC.addAction(PMAlertAction(title: "Cancel", style: PMAlertActionStyle.Cancel, handler: { (alert) in
-            
+        alertVC.addAction(PMAlertAction(title: "Cancel", style:  PMAlertActionStyle.Cancel, action: { () -> Void in
+            print("Cancel")
         }))
         
-        
-        alertVC.addAction(PMAlertAction(title: "Allow", style: PMAlertActionStyle.Default, handler: { (alert) in
-            
+
+        alertVC.addAction(PMAlertAction(title: "No Thanks", style: PMAlertActionStyle.Cancel, action: { () in
+            print("No thanks")
         }))
         
-//        alertVC.addAction(PMAlertAction(title: "No Thanks", style: PMAlertActionStyle.Default, handler: { (alert) in
-//            
-//        }))
-        
-        
+        alertVC.addAction(PMAlertAction(title: "Allow", style: PMAlertActionStyle.Default, action: { () in
+            print("Allow")
+        }))
         
         self.presentViewController(alertVC, animated: true, completion: nil)
     }
