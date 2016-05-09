@@ -17,24 +17,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWF-cs-AoI">
-                                <rect key="frame" x="44" y="28" width="46" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-yh-itC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lY-Kd-UGp">
+                                <rect key="frame" x="262" y="238" width="75" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Z00-wY-ANM"/>
-                                    <constraint firstAttribute="width" constant="46" id="ZC3-JI-fPT"/>
+                                    <constraint firstAttribute="width" constant="75" id="3hq-BU-ch7"/>
+                                    <constraint firstAttribute="height" constant="30" id="995-LB-zET"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Show Alert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfs-af-gKh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-8v-2tv">
+                                <rect key="frame" x="235" y="269" width="129" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dBF-bc-bap"/>
+                                    <constraint firstAttribute="width" constant="129" id="n5Q-Tf-vYY"/>
+                                </constraints>
+                                <state key="normal" title="Show Walkthrough">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWalkthrough:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3DJ-8n-Pv1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jJ-qd-rp2">
+                                <rect key="frame" x="227" y="300" width="145" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hui-dv-xEX"/>
+                                    <constraint firstAttribute="width" constant="145" id="J66-k0-qEu"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert 3 Buttons">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertWith3Buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aM3-n2-pYf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-BW-og0">
+                                <rect key="frame" x="200" y="331" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1ny-uG-jaz"/>
+                                    <constraint firstAttribute="height" constant="30" id="I1g-fu-FrY"/>
+                                </constraints>
+                                <state key="normal" title="Show Walkthrough 3 Buttons">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWalkthroughWith3Buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LuH-Co-p31"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jWF-cs-AoI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ac9-iS-LCA"/>
-                            <constraint firstItem="jWF-cs-AoI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="44" id="m6G-WX-Cug"/>
+                            <constraint firstItem="aCJ-yh-itC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5pH-xQ-WnV"/>
+                            <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="9fd-Tk-8mu"/>
+                            <constraint firstItem="9lY-Kd-UGp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-47" id="Gmy-62-kNv"/>
+                            <constraint firstItem="4HV-8v-2tv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-16" id="cFf-kC-er2"/>
+                            <constraint firstItem="9Tf-BW-og0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h6x-7g-Wc3"/>
+                            <constraint firstItem="aCJ-yh-itC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lHz-ks-chV"/>
+                            <constraint firstAttribute="trailing" secondItem="aCJ-yh-itC" secondAttribute="trailing" id="puC-EB-QJD"/>
+                            <constraint firstItem="9Tf-BW-og0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="46" id="qxo-cI-k4I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aCJ-yh-itC" secondAttribute="bottom" id="stE-tw-FFa"/>
+                            <constraint firstItem="9lY-Kd-UGp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tTH-uB-Y22"/>
+                            <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tU7-W9-P07"/>
+                            <constraint firstItem="4HV-8v-2tv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wbf-C0-0E9"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="317"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="2049" height="4266"/>
+    </resources>
 </document>

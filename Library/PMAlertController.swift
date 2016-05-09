@@ -26,7 +26,7 @@ public class PMAlertController: UIViewController {
     @IBOutlet weak var alertDescription: UILabel!
     @IBOutlet weak var alertActionStackView: UIStackView!
     @IBOutlet weak var alertStackViewHeightConstraint: NSLayoutConstraint!
-    var ALERT_STACK_VIEW_HEIGHT : CGFloat = 62
+    var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.mainScreen().bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     
     
     public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
@@ -59,6 +59,7 @@ public class PMAlertController: UIViewController {
             alertActionStackView.axis = .Vertical
         }
         else{
+            alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT
             alertActionStackView.axis = .Horizontal
         }
         
