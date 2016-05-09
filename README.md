@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/Users/pmusolino/Desktop/logo_pmalertcontroller.png" alt="Icon"/>
+  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/logo_pmalertcontroller.png" alt="Icon"/>
 </p>
   
  
@@ -12,7 +12,7 @@ PMAlertController is a small library that allows you to substitute the uncustomi
 Enjoy!
 
 <p align="center">
-  <img src="/Users/pmusolino/Desktop/preview_pmalertacontroller.jpg" width=500 alt="Icon"/>
+  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.jpg" width=500 alt="Icon"/>
 </p>
 
 ## Features
