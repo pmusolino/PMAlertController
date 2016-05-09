@@ -15,6 +15,7 @@
                 <outlet property="alertStackViewHeightConstraint" destination="sZH-1X-biu" id="air-m7-rmW"/>
                 <outlet property="alertTitle" destination="boW-P6-B3N" id="Q1I-HI-El2"/>
                 <outlet property="alertView" destination="dEl-s8-6vU" id="sSB-hF-osA"/>
+                <outlet property="alertViewWidthConstraint" destination="2KX-8C-U18" id="7hM-KT-GdH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -67,6 +68,7 @@
                     <constraints>
                         <constraint firstItem="Rwc-nf-sc4" firstAttribute="top" secondItem="dEl-s8-6vU" secondAttribute="top" constant="8" id="0dQ-To-LNx"/>
                         <constraint firstItem="BaL-rf-G7t" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="1e4-wO-qFm"/>
+                        <constraint firstAttribute="width" constant="564" id="2KX-8C-U18"/>
                         <constraint firstItem="Rwc-nf-sc4" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="9Tb-Ve-DYU"/>
                         <constraint firstItem="boW-P6-B3N" firstAttribute="top" secondItem="Rwc-nf-sc4" secondAttribute="bottom" constant="10" id="CfL-8C-VDW"/>
                         <constraint firstAttribute="trailing" secondItem="BaL-rf-G7t" secondAttribute="trailing" constant="8" id="DOm-G9-Two"/>
@@ -84,13 +86,12 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="dEl-s8-6vU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="29y-Pj-bM4"/>
                 <constraint firstItem="QvX-0K-co6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="J6U-mQ-rS6"/>
-                <constraint firstAttribute="trailing" secondItem="dEl-s8-6vU" secondAttribute="trailing" constant="18" id="MLR-rH-75P"/>
                 <constraint firstItem="dEl-s8-6vU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dOf-nv-3c3"/>
                 <constraint firstAttribute="trailing" secondItem="QvX-0K-co6" secondAttribute="trailing" id="erT-1L-Ofl"/>
                 <constraint firstAttribute="bottom" secondItem="QvX-0K-co6" secondAttribute="bottom" id="jhD-Oy-cte"/>
                 <constraint firstItem="QvX-0K-co6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nbk-z4-Mys"/>
-                <constraint firstItem="dEl-s8-6vU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="18" id="z8w-AN-5qY"/>
             </constraints>
         </view>
     </objects>

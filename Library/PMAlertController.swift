@@ -8,11 +8,18 @@
 
 import UIKit
 
+public enum PMAlertControllerStyle : Int {
+    
+    case Alert // with this style, the alert has the width of 270, like the UIAlertController of Apple
+    case Walkthrough //with walkthrough, the alert has the width of the screen minus 18 from the left and the right bounds. This mode is designed to suggest to the user actions for accept localization, push notifications and more.
+}
+
 public class PMAlertController: UIViewController {
     
     
     @IBOutlet weak var alertMaskBackground: UIImageView!
     @IBOutlet weak var alertView: UIView!
+    @IBOutlet weak var alertViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var alertImage: UIImageView!
     @IBOutlet weak var alertImageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var alertTitle: UILabel!
@@ -22,7 +29,7 @@ public class PMAlertController: UIViewController {
     var ALERT_STACK_VIEW_HEIGHT : CGFloat = 62
     
     
-    public convenience init(title: String, description: String, image: UIImage?) {
+    public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
         
         let nib = NSBundle.mainBundle().loadNibNamed("PMAlertController", owner: self, options: nil)
@@ -30,11 +37,16 @@ public class PMAlertController: UIViewController {
         
         self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
         self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-    
+        
         alertView.layer.cornerRadius = 5
         (image != nil) ? (alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
         alertTitle.text = title
         alertDescription.text = description
+        
+        
+        //if alert width = 270, else width = screen width - 36
+        style == .Alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.mainScreen().bounds.width - 36)
+    
         
         setShadowAlertView()
     }
