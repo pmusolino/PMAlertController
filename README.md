@@ -22,6 +22,8 @@ PMAlertController is a small library that allows you to substitute the uncustomi
 - [x] 1, 2 buttons (horizontally) or 3+ buttons (vertically)
 - [x] Closure when a button is pressed
 - [x] Similar implementation to UIAlertController
+- [x] Cocoapods
+- [] Carthage
 
 ## Requirements
 ----------------
