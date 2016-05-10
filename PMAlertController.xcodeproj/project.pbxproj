@@ -18,7 +18,7 @@
 		453B4F141CDE540400BFB901 /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453B4F0D1CDE411100BFB901 /* PMAlertController.xib */; };
 		453B4F151CDE7B6700BFB901 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 453B4EE51CDE3F0A00BFB901 /* Info.plist */; };
 		453B4F171CDF456F00BFB901 /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4F161CDF456F00BFB901 /* PMAlertAction.swift */; };
-		45D057B91CE2938100AEB2C7 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D057B81CE2938100AEB2C7 /* flag.png */; };
+		45E71ACD1CE29557001B16E9 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E71ACC1CE29557001B16E9 /* flag.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		453B4F0C1CDE411100BFB901 /* PMAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertController.swift; sourceTree = "<group>"; };
 		453B4F0D1CDE411100BFB901 /* PMAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMAlertController.xib; sourceTree = "<group>"; };
 		453B4F161CDF456F00BFB901 /* PMAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertAction.swift; sourceTree = "<group>"; };
-		45D057B81CE2938100AEB2C7 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		45E71ACC1CE29557001B16E9 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,7 @@
 		45D057B71CE2938100AEB2C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				45D057B81CE2938100AEB2C7 /* flag.png */,
+				45E71ACC1CE29557001B16E9 /* flag.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -261,9 +261,9 @@
 				453B4F151CDE7B6700BFB901 /* Info.plist in Resources */,
 				453B4EE41CDE3F0A00BFB901 /* LaunchScreen.storyboard in Resources */,
 				453B4EE11CDE3F0A00BFB901 /* Assets.xcassets in Resources */,
-				45D057B91CE2938100AEB2C7 /* flag.png in Resources */,
 				453B4EDF1CDE3F0A00BFB901 /* Main.storyboard in Resources */,
 				453B4F141CDE540400BFB901 /* PMAlertController.xib in Resources */,
+				45E71ACD1CE29557001B16E9 /* flag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
