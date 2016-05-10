@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Codeido/PMAlertController.git", :tag => "1.0.0" }
   s.source_files  = "Library/**/*"
   s.resource_bundles = {
-    'PMAlertController' => ['Library/Resources/*.png']
+    'PMAlertController' => ['Library/Resources/*.png', 'Library/**/*.xib']
   }
   s.framework  = "UIKit"
   s.requires_arc = true

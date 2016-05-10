@@ -32,8 +32,10 @@ public class PMAlertController: UIViewController {
     public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
         
-        let nib = NSBundle.mainBundle().loadNibNamed("PMAlertController", owner: self, options: nil)
-        self.view = nib[0] as! UIView
+        let nib = loadNibAlertController()
+        if nib != nil{
+            self.view = nib![0] as! UIView
+        }
         
         self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
         self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
@@ -46,7 +48,7 @@ public class PMAlertController: UIViewController {
         
         //if alert width = 270, else width = screen width - 36
         style == .Alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.mainScreen().bounds.width - 36)
-    
+        
         
         setShadowAlertView()
     }
@@ -76,5 +78,27 @@ public class PMAlertController: UIViewController {
         alertView.layer.shadowOffset = CGSizeMake(0, 0)
         alertView.layer.shadowRadius = 8
         alertView.layer.shadowOpacity = 0.3
+    }
+    
+    private func loadNibAlertController() -> [AnyObject]?{
+        let podBundle = NSBundle(forClass: self.classForCoder)
+        
+        if let bundleURL = podBundle.URLForResource("PMAlertController", withExtension: "bundle") {
+            
+            if let bundle = NSBundle(URL: bundleURL) {
+                return bundle.loadNibNamed("PMAlertController", owner: self, options: nil)
+            }
+            else {
+                assertionFailure("Could not load the bundle")
+            }
+            
+        }
+        else if let nib = NSBundle.mainBundle().loadNibNamed("PMAlertController", owner: self, options: nil) {
+                return nib
+        }
+        else{
+            assertionFailure("Could not create a path to the bundle")
+        }
+        return nil
     }
 }
