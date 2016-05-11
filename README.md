@@ -4,9 +4,9 @@
   
  
   ![Language](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)
-  [![GitHub license](https://img.shields.io/cocoapods/l/AFNetworking.svg)]()
+  [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)]()
 
-PMAlertController is a small library that allows you to substitute the uncustomizable UIAlertController of Apple, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
+PMAlertController is a small library that allows you to substitute Apple's uncustomizable `UIAlertController`, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.jpg" width=500 alt="Icon"/>
@@ -23,7 +23,7 @@ PMAlertController is a small library that allows you to substitute the uncustomi
 - [x] Closure when a button is pressed
 - [x] Similar implementation to UIAlertController
 - [x] Cocoapods
-- [] Carthage
+- [ ] Carthage
 
 ## Requirements
 ----------------
@@ -60,14 +60,15 @@ $ pod install
 
 ## Usage
 ----------------
-The usage is very similar to UIAlertController.
-PMAlertController has two style: Alert & Walkthrough.
+The usage is very similar to `UIAlertController`.
+`PMAlertController` has two styles: Alert & Walkthrough.
 
-**Alert Style:** with this style, the alert has the width of 270, like the UIAlertController of Apple
+**Alert Style:** with this style, the alert has the width of 270 points, like Apple's `UIAlertController`.
 
-**Walkthrough Style:** with walkthrough, the alert has the width of the screen minus 18 from the left and the right bounds. This mode is designed to suggest to the user actions for accept localization, push notifications and more.
+**Walkthrough Style:** with walkthrough, the alert has the width of the screen minus 18 points from the left and the right bounds. This mode is intended to be used before authorization requests like the ones for position, push notifications and more.
 
 #### Show a simple alert with two button
+
 ```swift
 let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), style: .Alert)
         
@@ -94,7 +95,7 @@ self.presentViewController(alertVC, animated: true, completion: nil)
 ## Acknowledgements
 
 Made with ❤️ by [Paolo Musolino](https://github.com/Codeido).
-The design is inspired on [Musement App](https://itunes.apple.com/app/musement-tours-attractions/id828471190). The flag icon on the demo app is by [Freepik](http://freepik.com).
+The design is inspired by the [Musement App](https://itunes.apple.com/app/musement-tours-attractions/id828471190). The flag icon on the demo app is by [Freepik](http://freepik.com).
 
 
 ## MIT License
