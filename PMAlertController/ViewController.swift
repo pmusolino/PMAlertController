@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     @IBAction func showAlert(sender: AnyObject) {
         
         let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .Alert) //Image by freepik.com, taken on flaticon.com
-        
+
         alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
             print("Cancel")
         }))
@@ -42,7 +42,6 @@ class ViewController: UIViewController {
     @IBAction func showWalkthrough(sender: AnyObject) {
         
         let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .Walkthrough) //Image by freepik.com, taken on flaticon.com
-        
         
         alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
             print("Cancel")
@@ -91,7 +90,4 @@ class ViewController: UIViewController {
         
         self.presentViewController(alertVC, animated: true, completion: nil)
     }
-    
-    
 }
-

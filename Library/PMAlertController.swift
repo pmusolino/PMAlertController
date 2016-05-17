@@ -27,8 +27,12 @@ public class PMAlertController: UIViewController {
     @IBOutlet weak var alertActionStackView: UIStackView!
     @IBOutlet weak var alertStackViewHeightConstraint: NSLayoutConstraint!
     var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.mainScreen().bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
+    var animator : UIDynamicAnimator?
     
+    public var gravityDismissAnimation = true
+
     
+    //MARK: - Init
     public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
         
@@ -53,6 +57,7 @@ public class PMAlertController: UIViewController {
         setShadowAlertView()
     }
     
+    //MARK: - Actions
     public func addAction(alertAction: PMAlertAction){
         alertActionStackView.addArrangedSubview(alertAction)
         
@@ -70,9 +75,11 @@ public class PMAlertController: UIViewController {
     }
     
     func dismissAlertController(sender: PMAlertAction){
+        self.animateDismissWithGravity()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //MARK: - Customizations
     private func setShadowAlertView(){
         alertView.layer.masksToBounds = false
         alertView.layer.shadowOffset = CGSizeMake(0, 0)
@@ -94,11 +101,28 @@ public class PMAlertController: UIViewController {
             
         }
         else if let nib = NSBundle.mainBundle().loadNibNamed("PMAlertController", owner: self, options: nil) {
-                return nib
+            return nib
         }
         else{
             assertionFailure("Could not create a path to the bundle")
         }
         return nil
+    }
+    
+    //MARK: - Animations
+    
+    private func animateDismissWithGravity(){
+        if gravityDismissAnimation == true{
+            animator = UIDynamicAnimator(referenceView: self.view)
+            
+            let gravityBehavior = UIGravityBehavior(items: [alertView])
+            gravityBehavior.gravityDirection = CGVectorMake(0, 10)
+            
+            animator?.addBehavior(gravityBehavior)
+            
+            let itemBehavior = UIDynamicItemBehavior(items: [alertView])
+            itemBehavior.addAngularVelocity(-3.14*2, forItem: alertView)
+            animator?.addBehavior(itemBehavior)
+        }
     }
 }
