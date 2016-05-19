@@ -17,16 +17,16 @@ public enum PMAlertControllerStyle : Int {
 public class PMAlertController: UIViewController {
     
     
-    @IBOutlet weak var alertMaskBackground: UIImageView!
-    @IBOutlet weak var alertView: UIView!
-    @IBOutlet weak var alertViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var alertImage: UIImageView!
-    @IBOutlet weak var alertImageHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var alertTitle: UILabel!
-    @IBOutlet weak var alertDescription: UILabel!
-    @IBOutlet weak var alertActionStackView: UIStackView!
+    @IBOutlet weak public var alertMaskBackground: UIImageView!
+    @IBOutlet weak public var alertView: UIView!
+    @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var alertImage: UIImageView!
+    @IBOutlet weak public var alertImageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var alertTitle: UILabel!
+    @IBOutlet weak public var alertDescription: UILabel!
+    @IBOutlet weak public var alertActionStackView: UIStackView!
     @IBOutlet weak var alertStackViewHeightConstraint: NSLayoutConstraint!
-    var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.mainScreen().bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
+    public var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.mainScreen().bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
     public var gravityDismissAnimation = true
