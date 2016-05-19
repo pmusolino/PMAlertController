@@ -9,14 +9,13 @@
 import UIKit
 
 public enum PMAlertControllerStyle : Int {
-    
-    case Alert // with this style, the alert has the width of 270, like the UIAlertController of Apple
-    case Walkthrough //with walkthrough, the alert has the width of the screen minus 18 from the left and the right bounds. This mode is designed to suggest to the user actions for accept localization, push notifications and more.
+    case Alert // The alert will adopt a width of 270 (like UIAlertController).
+    case Walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
 }
 
 public class PMAlertController: UIViewController {
     
-    
+    // MARK: Properties
     @IBOutlet weak public var alertMaskBackground: UIImageView!
     @IBOutlet weak public var alertView: UIView!
     @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
@@ -32,7 +31,7 @@ public class PMAlertController: UIViewController {
     public var gravityDismissAnimation = true
 
     
-    //MARK: - Init
+    //MARK: - Initialiser
     public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
         
