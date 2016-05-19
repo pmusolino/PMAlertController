@@ -79,6 +79,32 @@ public class PMAlertController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //MARK: - Styling
+    public func setTitleFont(font: UIFont?) {
+        if let font = font {
+            alertTitle.font = font
+        }
+    }
+    
+    public func setDescriptionFont(font: UIFont?) {
+        if let font = font {
+            alertDescription.font = font
+        }
+    }
+    
+    public func setTitleTextColor(color: UIColor?) {
+        if let color = color {
+            alertTitle.textColor = color
+        }
+    }
+    
+    
+    public func setDescriptionTextColor(color: UIColor?) {
+        if let color = color {
+            alertDescription.textColor = color
+        }
+    }
+    
     //MARK: - Customizations
     private func setShadowAlertView(){
         alertView.layer.masksToBounds = false
