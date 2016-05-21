@@ -3,8 +3,10 @@
 </p>
   
  
-  ![Language](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)
-  [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)]()
+  [![Language](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)]()
+  [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/Codeido/PMAlertController/blob/master/LICENSE)
+  [![Pod version](https://badge.fury.io/co/PMAlertController.svg)](https://cocoapods.org/pods/PMAlertController)
+  
 
 PMAlertController is a small library that allows you to substitute Apple's uncustomizable `UIAlertController`, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
 
