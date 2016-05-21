@@ -10,15 +10,15 @@
 		453B4EDA1CDE3F0A00BFB901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4ED91CDE3F0A00BFB901 /* AppDelegate.swift */; };
 		453B4EDC1CDE3F0A00BFB901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4EDB1CDE3F0A00BFB901 /* ViewController.swift */; };
 		453B4EDF1CDE3F0A00BFB901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453B4EDD1CDE3F0A00BFB901 /* Main.storyboard */; };
-		453B4EE11CDE3F0A00BFB901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453B4EE01CDE3F0A00BFB901 /* Assets.xcassets */; };
 		453B4EE41CDE3F0A00BFB901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453B4EE21CDE3F0A00BFB901 /* LaunchScreen.storyboard */; };
-		453B4EEF1CDE3F0A00BFB901 /* PMAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4EEE1CDE3F0A00BFB901 /* PMAlertControllerTests.swift */; };
-		453B4EFA1CDE3F0A00BFB901 /* PMAlertControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4EF91CDE3F0A00BFB901 /* PMAlertControllerUITests.swift */; };
-		453B4F131CDE53FF00BFB901 /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4F0C1CDE411100BFB901 /* PMAlertController.swift */; };
-		453B4F141CDE540400BFB901 /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453B4F0D1CDE411100BFB901 /* PMAlertController.xib */; };
-		453B4F151CDE7B6700BFB901 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 453B4EE51CDE3F0A00BFB901 /* Info.plist */; };
-		453B4F171CDF456F00BFB901 /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4F161CDF456F00BFB901 /* PMAlertAction.swift */; };
-		45E71ACD1CE29557001B16E9 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E71ACC1CE29557001B16E9 /* flag.png */; };
+		526FBB1A1CF0FB99005E5970 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 526FBB191CF0FB99005E5970 /* flag.png */; };
+		526FBB1C1CF0FBA2005E5970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526FBB1B1CF0FBA2005E5970 /* Assets.xcassets */; };
+		526FBB251CF0FD63005E5970 /* PMAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 526FBB241CF0FD63005E5970 /* PMAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		526FBB291CF0FD63005E5970 /* PMAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526FBB221CF0FD63005E5970 /* PMAlertController.framework */; };
+		526FBB2A1CF0FD63005E5970 /* PMAlertController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 526FBB221CF0FD63005E5970 /* PMAlertController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		526FBB2E1CF0FD7D005E5970 /* PMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4F0C1CDE411100BFB901 /* PMAlertController.swift */; };
+		526FBB2F1CF0FD7D005E5970 /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453B4F0D1CDE411100BFB901 /* PMAlertController.xib */; };
+		526FBB301CF0FD7D005E5970 /* PMAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B4F161CDF456F00BFB901 /* PMAlertAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,26 +36,46 @@
 			remoteGlobalIDString = 453B4ED51CDE3F0A00BFB901;
 			remoteInfo = PMAlertController;
 		};
+		526FBB271CF0FD63005E5970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 453B4ECE1CDE3F0A00BFB901 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 526FBB211CF0FD63005E5970;
+			remoteInfo = PMAlertController;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		52A3DD6C1CF0F891000C72E9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				526FBB2A1CF0FD63005E5970 /* PMAlertController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		453B4ED61CDE3F0A00BFB901 /* PMAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		453B4ED61CDE3F0A00BFB901 /* PMAlertControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMAlertControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453B4ED91CDE3F0A00BFB901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453B4EDB1CDE3F0A00BFB901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		453B4EDE1CDE3F0A00BFB901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		453B4EE01CDE3F0A00BFB901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453B4EE31CDE3F0A00BFB901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		453B4EE51CDE3F0A00BFB901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		453B4EEA1CDE3F0A00BFB901 /* PMAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		453B4EEE1CDE3F0A00BFB901 /* PMAlertControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMAlertControllerTests.swift; sourceTree = "<group>"; };
-		453B4EF01CDE3F0A00BFB901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		453B4EF51CDE3F0A00BFB901 /* PMAlertControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMAlertControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		453B4EF91CDE3F0A00BFB901 /* PMAlertControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMAlertControllerUITests.swift; sourceTree = "<group>"; };
-		453B4EFB1CDE3F0A00BFB901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		453B4F0C1CDE411100BFB901 /* PMAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertController.swift; sourceTree = "<group>"; };
 		453B4F0D1CDE411100BFB901 /* PMAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMAlertController.xib; sourceTree = "<group>"; };
 		453B4F161CDF456F00BFB901 /* PMAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMAlertAction.swift; sourceTree = "<group>"; };
-		45E71ACC1CE29557001B16E9 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		526FBB191CF0FB99005E5970 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		526FBB1B1CF0FBA2005E5970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PMAlertControllerSample/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		526FBB221CF0FD63005E5970 /* PMAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		526FBB241CF0FD63005E5970 /* PMAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMAlertController.h; sourceTree = "<group>"; };
+		526FBB261CF0FD63005E5970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526FBB291CF0FD63005E5970 /* PMAlertController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		526FBB1E1CF0FD63005E5970 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,9 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				453B4F091CDE3F9A00BFB901 /* Library */,
-				453B4ED81CDE3F0A00BFB901 /* PMAlertController */,
-				453B4EED1CDE3F0A00BFB901 /* PMAlertControllerTests */,
-				453B4EF81CDE3F0A00BFB901 /* PMAlertControllerUITests */,
+				453B4ED81CDE3F0A00BFB901 /* PMAlertControllerSample */,
+				526FBB231CF0FD63005E5970 /* PMAlertController */,
 				453B4ED71CDE3F0A00BFB901 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,42 +124,25 @@
 		453B4ED71CDE3F0A00BFB901 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				453B4ED61CDE3F0A00BFB901 /* PMAlertController.app */,
+				453B4ED61CDE3F0A00BFB901 /* PMAlertControllerSample.app */,
 				453B4EEA1CDE3F0A00BFB901 /* PMAlertControllerTests.xctest */,
 				453B4EF51CDE3F0A00BFB901 /* PMAlertControllerUITests.xctest */,
+				526FBB221CF0FD63005E5970 /* PMAlertController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		453B4ED81CDE3F0A00BFB901 /* PMAlertController */ = {
+		453B4ED81CDE3F0A00BFB901 /* PMAlertControllerSample */ = {
 			isa = PBXGroup;
 			children = (
+				526FBB181CF0FB99005E5970 /* Resources */,
 				453B4ED91CDE3F0A00BFB901 /* AppDelegate.swift */,
 				453B4EDB1CDE3F0A00BFB901 /* ViewController.swift */,
 				453B4EDD1CDE3F0A00BFB901 /* Main.storyboard */,
-				453B4EE01CDE3F0A00BFB901 /* Assets.xcassets */,
 				453B4EE21CDE3F0A00BFB901 /* LaunchScreen.storyboard */,
 				453B4EE51CDE3F0A00BFB901 /* Info.plist */,
 			);
-			path = PMAlertController;
-			sourceTree = "<group>";
-		};
-		453B4EED1CDE3F0A00BFB901 /* PMAlertControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				453B4EEE1CDE3F0A00BFB901 /* PMAlertControllerTests.swift */,
-				453B4EF01CDE3F0A00BFB901 /* Info.plist */,
-			);
-			path = PMAlertControllerTests;
-			sourceTree = "<group>";
-		};
-		453B4EF81CDE3F0A00BFB901 /* PMAlertControllerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				453B4EF91CDE3F0A00BFB901 /* PMAlertControllerUITests.swift */,
-				453B4EFB1CDE3F0A00BFB901 /* Info.plist */,
-			);
-			path = PMAlertControllerUITests;
+			path = PMAlertControllerSample;
 			sourceTree = "<group>";
 		};
 		453B4F091CDE3F9A00BFB901 /* Library */ = {
@@ -141,37 +151,59 @@
 				453B4F0C1CDE411100BFB901 /* PMAlertController.swift */,
 				453B4F0D1CDE411100BFB901 /* PMAlertController.xib */,
 				453B4F161CDF456F00BFB901 /* PMAlertAction.swift */,
-				45D057B71CE2938100AEB2C7 /* Resources */,
 			);
 			path = Library;
 			sourceTree = "<group>";
 		};
-		45D057B71CE2938100AEB2C7 /* Resources */ = {
+		526FBB181CF0FB99005E5970 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				45E71ACC1CE29557001B16E9 /* flag.png */,
+				526FBB1B1CF0FBA2005E5970 /* Assets.xcassets */,
+				526FBB191CF0FB99005E5970 /* flag.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		526FBB231CF0FD63005E5970 /* PMAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				526FBB241CF0FD63005E5970 /* PMAlertController.h */,
+				526FBB261CF0FD63005E5970 /* Info.plist */,
+			);
+			path = PMAlertController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		526FBB1F1CF0FD63005E5970 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526FBB251CF0FD63005E5970 /* PMAlertController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		453B4ED51CDE3F0A00BFB901 /* PMAlertController */ = {
+		453B4ED51CDE3F0A00BFB901 /* PMAlertControllerSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 453B4EFE1CDE3F0A00BFB901 /* Build configuration list for PBXNativeTarget "PMAlertController" */;
+			buildConfigurationList = 453B4EFE1CDE3F0A00BFB901 /* Build configuration list for PBXNativeTarget "PMAlertControllerSample" */;
 			buildPhases = (
 				453B4ED21CDE3F0A00BFB901 /* Sources */,
 				453B4ED31CDE3F0A00BFB901 /* Frameworks */,
 				453B4ED41CDE3F0A00BFB901 /* Resources */,
+				52A3DD6C1CF0F891000C72E9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				526FBB281CF0FD63005E5970 /* PBXTargetDependency */,
 			);
-			name = PMAlertController;
+			name = PMAlertControllerSample;
 			productName = PMAlertController;
-			productReference = 453B4ED61CDE3F0A00BFB901 /* PMAlertController.app */;
+			productReference = 453B4ED61CDE3F0A00BFB901 /* PMAlertControllerSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		453B4EE91CDE3F0A00BFB901 /* PMAlertControllerTests */ = {
@@ -210,6 +242,24 @@
 			productReference = 453B4EF51CDE3F0A00BFB901 /* PMAlertControllerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		526FBB211CF0FD63005E5970 /* PMAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 526FBB2B1CF0FD63005E5970 /* Build configuration list for PBXNativeTarget "PMAlertController" */;
+			buildPhases = (
+				526FBB1D1CF0FD63005E5970 /* Sources */,
+				526FBB1E1CF0FD63005E5970 /* Frameworks */,
+				526FBB1F1CF0FD63005E5970 /* Headers */,
+				526FBB201CF0FD63005E5970 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PMAlertController;
+			productName = PMAlertController;
+			productReference = 526FBB221CF0FD63005E5970 /* PMAlertController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,6 +281,9 @@
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 453B4ED51CDE3F0A00BFB901;
 					};
+					526FBB211CF0FD63005E5970 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 453B4ED11CDE3F0A00BFB901 /* Build configuration list for PBXProject "PMAlertController" */;
@@ -246,9 +299,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				453B4ED51CDE3F0A00BFB901 /* PMAlertController */,
+				453B4ED51CDE3F0A00BFB901 /* PMAlertControllerSample */,
 				453B4EE91CDE3F0A00BFB901 /* PMAlertControllerTests */,
 				453B4EF41CDE3F0A00BFB901 /* PMAlertControllerUITests */,
+				526FBB211CF0FD63005E5970 /* PMAlertController */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +312,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453B4F151CDE7B6700BFB901 /* Info.plist in Resources */,
 				453B4EE41CDE3F0A00BFB901 /* LaunchScreen.storyboard in Resources */,
-				453B4EE11CDE3F0A00BFB901 /* Assets.xcassets in Resources */,
 				453B4EDF1CDE3F0A00BFB901 /* Main.storyboard in Resources */,
-				453B4F141CDE540400BFB901 /* PMAlertController.xib in Resources */,
-				45E71ACD1CE29557001B16E9 /* flag.png in Resources */,
+				526FBB1C1CF0FBA2005E5970 /* Assets.xcassets in Resources */,
+				526FBB1A1CF0FB99005E5970 /* flag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +333,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		526FBB201CF0FD63005E5970 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526FBB2F1CF0FD7D005E5970 /* PMAlertController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -289,9 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				453B4EDC1CDE3F0A00BFB901 /* ViewController.swift in Sources */,
-				453B4F171CDF456F00BFB901 /* PMAlertAction.swift in Sources */,
 				453B4EDA1CDE3F0A00BFB901 /* AppDelegate.swift in Sources */,
-				453B4F131CDE53FF00BFB901 /* PMAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453B4EEF1CDE3F0A00BFB901 /* PMAlertControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +364,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453B4EFA1CDE3F0A00BFB901 /* PMAlertControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526FBB1D1CF0FD63005E5970 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526FBB2E1CF0FD7D005E5970 /* PMAlertController.swift in Sources */,
+				526FBB301CF0FD7D005E5970 /* PMAlertAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,13 +381,18 @@
 /* Begin PBXTargetDependency section */
 		453B4EEC1CDE3F0A00BFB901 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 453B4ED51CDE3F0A00BFB901 /* PMAlertController */;
+			target = 453B4ED51CDE3F0A00BFB901 /* PMAlertControllerSample */;
 			targetProxy = 453B4EEB1CDE3F0A00BFB901 /* PBXContainerItemProxy */;
 		};
 		453B4EF71CDE3F0A00BFB901 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 453B4ED51CDE3F0A00BFB901 /* PMAlertController */;
+			target = 453B4ED51CDE3F0A00BFB901 /* PMAlertControllerSample */;
 			targetProxy = 453B4EF61CDE3F0A00BFB901 /* PBXContainerItemProxy */;
+		};
+		526FBB281CF0FD63005E5970 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 526FBB211CF0FD63005E5970 /* PMAlertController */;
+			targetProxy = 526FBB271CF0FD63005E5970 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,9 +505,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PMAlertController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertControllerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -446,9 +517,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PMAlertController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertControllerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -499,6 +571,46 @@
 			};
 			name = Release;
 		};
+		526FBB2C1CF0FD63005E5970 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PMAlertController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		526FBB2D1CF0FD63005E5970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PMAlertController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codeido.PMAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		453B4EFE1CDE3F0A00BFB901 /* Build configuration list for PBXNativeTarget "PMAlertController" */ = {
+		453B4EFE1CDE3F0A00BFB901 /* Build configuration list for PBXNativeTarget "PMAlertControllerSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				453B4EFF1CDE3F0A00BFB901 /* Debug */,
@@ -537,6 +649,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		526FBB2B1CF0FD63005E5970 /* Build configuration list for PBXNativeTarget "PMAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526FBB2C1CF0FD63005E5970 /* Debug */,
+				526FBB2D1CF0FD63005E5970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

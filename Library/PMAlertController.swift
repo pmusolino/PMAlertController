@@ -99,7 +99,7 @@ import UIKit
             }
             
         }
-        else if let nib = NSBundle.mainBundle().loadNibNamed("PMAlertController", owner: self, options: nil) {
+        else if let nib = podBundle.loadNibNamed("PMAlertController", owner: self, options: nil) {
             return nib
         }
         else{
