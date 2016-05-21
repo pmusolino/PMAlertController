@@ -25,6 +25,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Cocoapods
 - [ ] Carthage
 - [x] Animation with UIKit Dynamics
+- [x] Objective-C compatibility
 
 ## Requirements
 ----------------

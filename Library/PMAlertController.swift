@@ -8,12 +8,12 @@
 
 import UIKit
 
-public enum PMAlertControllerStyle : Int {
+@objc public enum PMAlertControllerStyle : Int {
     case Alert // The alert will adopt a width of 270 (like UIAlertController).
     case Walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
 }
 
-public class PMAlertController: UIViewController {
+@objc public class PMAlertController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak public var alertMaskBackground: UIImageView!
@@ -29,10 +29,10 @@ public class PMAlertController: UIViewController {
     var animator : UIDynamicAnimator?
     
     public var gravityDismissAnimation = true
-
+    
     
     //MARK: - Initialiser
-    public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
+    @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
         
         let nib = loadNibAlertController()
@@ -57,7 +57,7 @@ public class PMAlertController: UIViewController {
     }
     
     //MARK: - Actions
-    public func addAction(alertAction: PMAlertAction){
+    @objc public func addAction(alertAction: PMAlertAction){
         alertActionStackView.addArrangedSubview(alertAction)
         
         if alertActionStackView.arrangedSubviews.count > 2{
@@ -73,20 +73,20 @@ public class PMAlertController: UIViewController {
         
     }
     
-    func dismissAlertController(sender: PMAlertAction){
+    @objc private func dismissAlertController(sender: PMAlertAction){
         self.animateDismissWithGravity()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //MARK: - Customizations
-    private func setShadowAlertView(){
+    @objc private func setShadowAlertView(){
         alertView.layer.masksToBounds = false
         alertView.layer.shadowOffset = CGSizeMake(0, 0)
         alertView.layer.shadowRadius = 8
         alertView.layer.shadowOpacity = 0.3
     }
     
-    private func loadNibAlertController() -> [AnyObject]?{
+    @objc private func loadNibAlertController() -> [AnyObject]?{
         let podBundle = NSBundle(forClass: self.classForCoder)
         
         if let bundleURL = podBundle.URLForResource("PMAlertController", withExtension: "bundle") {
@@ -110,7 +110,7 @@ public class PMAlertController: UIViewController {
     
     //MARK: - Animations
     
-    private func animateDismissWithGravity(){
+    @objc private func animateDismissWithGravity(){
         if gravityDismissAnimation == true{
             animator = UIDynamicAnimator(referenceView: self.view)
             

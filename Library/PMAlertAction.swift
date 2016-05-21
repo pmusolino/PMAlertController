@@ -8,19 +8,19 @@
 
 import UIKit
 
-public enum PMAlertActionStyle : Int {
+@objc public enum PMAlertActionStyle : Int {
     
     case Default
     case Cancel
 }
 
-public class PMAlertAction: UIButton {
+@objc public class PMAlertAction: UIButton {
     
     private var action: (() -> Void)?
     
     var separator = UIImageView()
     
-    public convenience init(title: String?, style: PMAlertActionStyle, action: (() -> Void)? = nil){
+    @objc public convenience init(title: String?, style: PMAlertActionStyle, action: (() -> Void)? = nil){
         self.init()
         
         self.action = action
@@ -34,11 +34,11 @@ public class PMAlertAction: UIButton {
         self.addSeparator()
     }
     
-    func tapped(sender: PMAlertAction) {
+    @objc func tapped(sender: PMAlertAction) {
         self.action?()
     }
     
-    private func addSeparator(){
+    @objc private func addSeparator(){
         separator.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.2)
         self.addSubview(separator)
         
