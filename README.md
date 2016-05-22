@@ -25,7 +25,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Closure when a button is pressed
 - [x] Similar implementation to UIAlertController
 - [x] Cocoapods
-- [ ] Carthage
+- [x] Carthage
 - [x] Animation with UIKit Dynamics
 - [x] Objective-C compatibility
 

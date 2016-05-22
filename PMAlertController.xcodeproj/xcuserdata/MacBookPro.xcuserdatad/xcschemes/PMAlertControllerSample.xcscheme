@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52A3DD5F1CF0F891000C72E9"
-               BuildableName = "PMAlertController.framework"
-               BlueprintName = "PMAlertController"
+               BlueprintIdentifier = "453B4ED51CDE3F0A00BFB901"
+               BuildableName = "PMAlertControllerSample.app"
+               BlueprintName = "PMAlertControllerSample"
                ReferencedContainer = "container:PMAlertController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "453B4EE91CDE3F0A00BFB901"
+               BuildableName = "PMAlertControllerTests.xctest"
+               BlueprintName = "PMAlertControllerTests"
+               ReferencedContainer = "container:PMAlertController.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "453B4EF41CDE3F0A00BFB901"
+               BuildableName = "PMAlertControllerUITests.xctest"
+               BlueprintName = "PMAlertControllerUITests"
+               ReferencedContainer = "container:PMAlertController.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "453B4ED51CDE3F0A00BFB901"
+            BuildableName = "PMAlertControllerSample.app"
+            BlueprintName = "PMAlertControllerSample"
+            ReferencedContainer = "container:PMAlertController.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52A3DD5F1CF0F891000C72E9"
-            BuildableName = "PMAlertController.framework"
-            BlueprintName = "PMAlertController"
+            BlueprintIdentifier = "453B4ED51CDE3F0A00BFB901"
+            BuildableName = "PMAlertControllerSample.app"
+            BlueprintName = "PMAlertControllerSample"
             ReferencedContainer = "container:PMAlertController.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,15 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52A3DD5F1CF0F891000C72E9"
-            BuildableName = "PMAlertController.framework"
-            BlueprintName = "PMAlertController"
+            BlueprintIdentifier = "453B4ED51CDE3F0A00BFB901"
+            BuildableName = "PMAlertControllerSample.app"
+            BlueprintName = "PMAlertControllerSample"
             ReferencedContainer = "container:PMAlertController.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
