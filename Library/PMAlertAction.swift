@@ -27,12 +27,12 @@ import UIKit
         super.init(frame: CGRectZero)
     }
     
-    @objc public convenience init(title: String?, style: PMAlertActionStyle, action: (() -> Void)? = nil){
+    @objc public convenience init(title: String?,color:UIColor?, style: PMAlertActionStyle, action: (() -> Void)? = nil){
         self.init()
         
         self.action = action
         self.addTarget(self, action: #selector(PMAlertAction.tapped(_:)), forControlEvents: .TouchUpInside)
-        
+         self.titleLabel?.textColor = color
         self.setTitle(title, forState: UIControlState.Normal)
         self.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 17)
         
