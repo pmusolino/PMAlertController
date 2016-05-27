@@ -74,7 +74,7 @@ import UIKit
     }
     
     @objc private func dismissAlertController(sender: PMAlertAction){
-        self.animateDismissWithGravity()
+        self.animateDismissWithGravity(sender.actionStyle)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -110,8 +110,14 @@ import UIKit
     
     //MARK: - Animations
     
-    @objc private func animateDismissWithGravity(){
+    @objc private func animateDismissWithGravity(style: PMAlertActionStyle){
         if gravityDismissAnimation == true{
+            var radian = M_PI
+            if style == .Default {
+                radian = 2 * M_PI
+            }else{
+                radian = -2 * M_PI
+            }
             animator = UIDynamicAnimator(referenceView: self.view)
             
             let gravityBehavior = UIGravityBehavior(items: [alertView])
@@ -120,7 +126,7 @@ import UIKit
             animator?.addBehavior(gravityBehavior)
             
             let itemBehavior = UIDynamicItemBehavior(items: [alertView])
-            itemBehavior.addAngularVelocity(-3.14*2, forItem: alertView)
+            itemBehavior.addAngularVelocity(CGFloat(radian), forItem: alertView)
             animator?.addBehavior(itemBehavior)
         }
     }
