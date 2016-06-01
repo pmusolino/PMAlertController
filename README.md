@@ -47,7 +47,7 @@ $ gem install cocoapods
 To integrate PMAlertController into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 
-```
+```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
@@ -95,15 +95,15 @@ The usage is very similar to `UIAlertController`.
 
 ```swift
 let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), style: .Alert)
-        
+
 alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
-            print("Capture action Cancel")
-        }))
-        
+    print("Capture action Cancel")
+}))
+
 alertVC.addAction(PMAlertAction(title: "OK", style: .Default, action: { () in
-            print("Capture action OK")
-        }))
-        
+    print("Capture action OK")
+}))
+
 self.presentViewController(alertVC, animated: true, completion: nil)
 ```
 
