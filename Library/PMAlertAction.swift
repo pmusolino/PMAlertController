@@ -56,12 +56,9 @@ import UIKit
         
         // Autolayout separator
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.topAnchor.constraintEqualToAnchor(
-            self.topAnchor).active = true
-        separator.leadingAnchor.constraintEqualToAnchor(
-            self.layoutMarginsGuide.leadingAnchor, constant: 8).active = true
-        separator.trailingAnchor.constraintEqualToAnchor(
-            self.layoutMarginsGuide.trailingAnchor, constant: -8).active = true
+        separator.topAnchor.constraintEqualToAnchor(self.topAnchor).active = true
+        separator.leadingAnchor.constraintEqualToAnchor(self.layoutMarginsGuide.leadingAnchor, constant: 8).active = true
+        separator.trailingAnchor.constraintEqualToAnchor(self.layoutMarginsGuide.trailingAnchor, constant: -8).active = true
         separator.heightAnchor.constraintEqualToConstant(1).active = true
     }
     
