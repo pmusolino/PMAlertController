@@ -81,6 +81,10 @@ github "Codeido/PMAlertController"
 
 Run `carthage update` to build the framework and drag the built `PMAlertController.framework` into your Xcode project.
 
+## Manually
+----------------
+1. Download and drop ```/Library``` folder in your project.  
+2. Congratulations!  
 
 ## Usage
 ----------------
