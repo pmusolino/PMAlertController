@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
@@ -24,71 +24,69 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
     @IBAction func showAlert(sender: AnyObject) {
-        
-        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .Alert) //Image by freepik.com, taken on flaticon.com
+        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .alert) //Image by freepik.com, taken on flaticon.com
 
-        alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
             print("Cancel")
         }))
         
-        alertVC.addAction(PMAlertAction(title: "Allow", style: .Default, action: { () in
+        alertVC.addAction(PMAlertAction(title: "Allow", style: .default, action: { () in
             print("Allow")
         }))
         
-        self.presentViewController(alertVC, animated: true, completion: nil)
+        self.present(alertVC, animated: true, completion: nil)
     }
     
     @IBAction func showWalkthrough(sender: AnyObject) {
         
-        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .Walkthrough) //Image by freepik.com, taken on flaticon.com
+        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .walkthrough) //Image by freepik.com, taken on flaticon.com
         
-        alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
             print("Cancel")
         }))
         
-        alertVC.addAction(PMAlertAction(title: "Allow", style: .Default, action: { () in
+        alertVC.addAction(PMAlertAction(title: "Allow", style: .default, action: { () in
             print("Allow")
         }))
         
-        self.presentViewController(alertVC, animated: true, completion: nil)
+        self.present(alertVC, animated: true, completion: nil)
     }
     
     @IBAction func showAlertWith3Buttons(sender: AnyObject) {
         
-        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .Alert) //Image by freepik.com, taken on flaticon.com
+        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .alert) //Image by freepik.com, taken on flaticon.com
         
-        alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
             print("Cancel")
         }))
         
-        alertVC.addAction(PMAlertAction(title: "No Thanks", style: .Cancel, action: { () in
+        alertVC.addAction(PMAlertAction(title: "No Thanks", style: .cancel, action: { () in
             print("No thanks")
         }))
         
-        alertVC.addAction(PMAlertAction(title: "Allow", style: .Default, action: { () in
+        alertVC.addAction(PMAlertAction(title: "Allow", style: .default, action: { () in
             print("Allow")
         }))
         
-        self.presentViewController(alertVC, animated: true, completion: nil)
+        self.present(alertVC, animated: true, completion: nil)
     }
     
     @IBAction func showWalkthroughWith3Buttons(sender: AnyObject) {
-        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .Walkthrough) //Image by freepik.com, taken on flaticon.com
+        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .walkthrough) //Image by freepik.com, taken on flaticon.com
         
-        alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
             print("Cancel")
         }))
         
-        alertVC.addAction(PMAlertAction(title: "No Thanks", style: .Cancel, action: { () in
+        alertVC.addAction(PMAlertAction(title: "No Thanks", style: .cancel, action: { () in
             print("No thanks")
         }))
         
-        alertVC.addAction(PMAlertAction(title: "Allow", style: .Default, action: { () in
+        alertVC.addAction(PMAlertAction(title: "Allow", style: .default, action: { () in
             print("Allow")
         }))
         
-        self.presentViewController(alertVC, animated: true, completion: nil)
+        self.present(alertVC, animated: true, completion: nil)
     }
 }

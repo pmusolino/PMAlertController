@@ -34,7 +34,6 @@ import UIKit
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
-        
         let nib = loadNibAlertController()
         if nib != nil{
             self.view = nib![0] as! UIView
@@ -99,7 +98,7 @@ import UIKit
             }
             
         }
-        else if let nib = podBundle.loadNibNamed("PMAlertController", owner: self, options: nil) {
+        else if let nib = podBundle.loadNibNamed("PMAlertController", owner: self, options: nil) as [AnyObject]?{
             return nib
         }
         else{
