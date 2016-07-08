@@ -28,6 +28,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Carthage
 - [x] Animation with UIKit Dynamics
 - [x] Objective-C compatibility
+- [x] Swift 3 support (in progress): https://github.com/Codeido/PMAlertController/tree/swift3
 
 ## Requirements
 ----------------
