@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func showAlert(sender: AnyObject) {
+    @IBAction func showAlert(_ sender: AnyObject) {
         let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .alert) //Image by freepik.com, taken on flaticon.com
 
         alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
-    @IBAction func showWalkthrough(sender: AnyObject) {
+    @IBAction func showWalkthrough(_ sender: AnyObject) {
         
         let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .walkthrough) //Image by freepik.com, taken on flaticon.com
         
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
-    @IBAction func showAlertWith3Buttons(sender: AnyObject) {
+    @IBAction func showAlertWith3Buttons(_ sender: AnyObject) {
         
         let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .alert) //Image by freepik.com, taken on flaticon.com
         
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
-    @IBAction func showWalkthroughWith3Buttons(sender: AnyObject) {
+    @IBAction func showWalkthroughWith3Buttons(_ sender: AnyObject) {
         let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .walkthrough) //Image by freepik.com, taken on flaticon.com
         
         alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
