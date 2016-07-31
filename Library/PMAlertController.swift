@@ -19,8 +19,8 @@ import UIKit
     @IBOutlet weak public var alertMaskBackground: UIImageView!
     @IBOutlet weak public var alertView: UIView!
     @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var alertImage: UIImageView!
-    @IBOutlet weak public var alertImageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var alertHeaderView: UIView!
+    @IBOutlet weak public var alertHeaderViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak public var alertTitle: UILabel!
     @IBOutlet weak public var alertDescription: UILabel!
     @IBOutlet weak public var alertActionStackView: UIStackView!
@@ -32,7 +32,7 @@ import UIKit
     
     
     //MARK: - Initialiser
-    @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
+    @objc public convenience init(title: String, description: String, header: UIView?, style: PMAlertControllerStyle) {
         self.init()
         let nib = loadNibAlertController()
         if nib != nil{
@@ -43,7 +43,17 @@ import UIKit
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         alertView.layer.cornerRadius = 5
-        (image != nil) ? (alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
+        if let header = header {
+            alertHeaderView.addSubview(header)
+            header.translatesAutoresizingMaskIntoConstraints = false
+            header.leadingAnchor.constraint(equalTo: alertHeaderView.leadingAnchor).isActive = true
+            header.trailingAnchor.constraint(equalTo: alertHeaderView.trailingAnchor).isActive = true
+            header.topAnchor.constraint(equalTo: alertHeaderView.topAnchor).isActive = true
+            header.bottomAnchor.constraint(equalTo: alertHeaderView.bottomAnchor).isActive = true
+            alertHeaderViewHeightConstraint.isActive = false
+        } else {
+            alertHeaderViewHeightConstraint.constant = 0
+        }
         alertTitle.text = title
         alertDescription.text = description
         
