@@ -71,12 +71,27 @@
                                     <action selector="showWalkthroughWith3Buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LuH-Co-p31"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUF-RE-yIG">
+                                <rect key="frame" x="200" y="363" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="V0g-Wl-Gur"/>
+                                    <constraint firstAttribute="height" constant="30" id="kOr-zR-naT"/>
+                                </constraints>
+                                <state key="normal" title="Show Vertical 2 Buttons">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showVertical2Buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgb-Fr-2V5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aCJ-yh-itC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5pH-xQ-WnV"/>
                             <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="9fd-Tk-8mu"/>
                             <constraint firstItem="9lY-Kd-UGp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-47" id="Gmy-62-kNv"/>
+                            <constraint firstItem="SUF-RE-yIG" firstAttribute="top" secondItem="9Tf-BW-og0" secondAttribute="bottom" constant="2" id="T13-sh-q8q"/>
+                            <constraint firstItem="SUF-RE-yIG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TuQ-jS-H9G"/>
                             <constraint firstItem="4HV-8v-2tv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-16" id="cFf-kC-er2"/>
                             <constraint firstItem="9Tf-BW-og0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h6x-7g-Wc3"/>
                             <constraint firstItem="aCJ-yh-itC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lHz-ks-chV"/>
