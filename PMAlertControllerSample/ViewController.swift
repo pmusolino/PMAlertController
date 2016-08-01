@@ -91,4 +91,17 @@ class ViewController: UIViewController {
         
         self.presentViewController(alertVC, animated: true, completion: nil)
     }
+    
+    @IBAction func showVertical2Buttons(sender: AnyObject) {
+        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .Alert, orientation: .Vertical) //Image by freepik.com, taken on flaticon.com
+        
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
+            print("Cancel")
+        }))
+        alertVC.addAction(PMAlertAction(title: "Allow", style: .Default, action: { () in
+            print("Allow")
+        }))
+        
+        self.presentViewController(alertVC, animated: true, completion: nil)
+    }
 }

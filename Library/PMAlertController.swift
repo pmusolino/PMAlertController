@@ -13,6 +13,12 @@ import UIKit
     case Walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
 }
 
+@objc public enum PMAlertControllerOrientation: Int {
+    case Default // The buttons will be shown horizontally if 2 buttons max or vertically if more than 2 buttons
+    case Vertical // The buttons will be shown vertically
+    case Horizontal // The buttons will be show horizontally
+}
+
 @objc public class PMAlertController: UIViewController {
     
     // MARK: Properties
@@ -29,10 +35,13 @@ import UIKit
     var animator : UIDynamicAnimator?
     
     public var gravityDismissAnimation = true
+    public var buttonsOrientation: PMAlertControllerOrientation = .Default
     
     
     //MARK: - Initialiser
-    @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
+    @objc public convenience init(title: String, description: String, image: UIImage?,
+                                  style: PMAlertControllerStyle,
+                                  orientation: PMAlertControllerOrientation = .Default) {
         self.init()
         
         let nib = loadNibAlertController()
@@ -42,6 +51,7 @@ import UIKit
         
         self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
         self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        self.buttonsOrientation = orientation
         
         alertView.layer.cornerRadius = 5
         (image != nil) ? (alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
@@ -60,13 +70,27 @@ import UIKit
     @objc public func addAction(alertAction: PMAlertAction){
         alertActionStackView.addArrangedSubview(alertAction)
         
-        if alertActionStackView.arrangedSubviews.count > 2{
-            alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
-            alertActionStackView.axis = .Vertical
+        var orientation: UILayoutConstraintAxis
+        switch buttonsOrientation {
+        case .Default:
+            if alertActionStackView.arrangedSubviews.count > 2{
+                orientation = .Vertical
+            }
+            else{
+                orientation = .Horizontal
+            }
+        case .Horizontal:
+            orientation = .Horizontal
+        case .Vertical:
+            orientation = .Vertical
+        }
+        
+        alertActionStackView.axis = orientation
+        if orientation == .Horizontal{
+            alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT
         }
         else{
-            alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT
-            alertActionStackView.axis = .Horizontal
+            alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
         }
         
         alertAction.addTarget(self, action: #selector(PMAlertController.dismissAlertController(_:)), forControlEvents: .TouchUpInside)
