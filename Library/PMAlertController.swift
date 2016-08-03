@@ -24,7 +24,7 @@ import UIKit
     @IBOutlet weak public var alertTitle: UILabel!
     @IBOutlet weak public var alertDescription: UILabel!
     @IBOutlet weak public var alertActionStackView: UIStackView!
-    @IBOutlet weak private var alertStackViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var alertStackViewHeightConstraint: NSLayoutConstraint!
     public var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main().bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
