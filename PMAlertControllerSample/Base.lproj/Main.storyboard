@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -21,10 +21,6 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lY-Kd-UGp">
                                 <rect key="frame" x="262" y="238" width="75" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="3hq-BU-ch7"/>
-                                    <constraint firstAttribute="height" constant="30" id="995-LB-zET"/>
-                                </constraints>
                                 <state key="normal" title="Show Alert">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,10 +30,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-8v-2tv">
                                 <rect key="frame" x="235" y="269" width="129" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dBF-bc-bap"/>
-                                    <constraint firstAttribute="width" constant="129" id="n5Q-Tf-vYY"/>
-                                </constraints>
                                 <state key="normal" title="Show Walkthrough">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -47,10 +39,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jJ-qd-rp2">
                                 <rect key="frame" x="227" y="300" width="145" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Hui-dv-xEX"/>
-                                    <constraint firstAttribute="width" constant="145" id="J66-k0-qEu"/>
-                                </constraints>
                                 <state key="normal" title="Show Alert 3 Buttons">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,10 +48,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-BW-og0">
                                 <rect key="frame" x="200" y="331" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="1ny-uG-jaz"/>
-                                    <constraint firstAttribute="height" constant="30" id="I1g-fu-FrY"/>
-                                </constraints>
                                 <state key="normal" title="Show Walkthrough 3 Buttons">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -71,21 +55,35 @@
                                     <action selector="showWalkthroughWith3Buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LuH-Co-p31"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR7-2Z-h6K">
+                                <rect key="frame" x="223" y="207" width="152" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="hms-mZ-v1u"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert With Blur">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertWithBlur:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqE-pd-X6N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aCJ-yh-itC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5pH-xQ-WnV"/>
-                            <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="9fd-Tk-8mu"/>
-                            <constraint firstItem="9lY-Kd-UGp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-47" id="Gmy-62-kNv"/>
-                            <constraint firstItem="4HV-8v-2tv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-16" id="cFf-kC-er2"/>
-                            <constraint firstItem="9Tf-BW-og0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h6x-7g-Wc3"/>
-                            <constraint firstItem="aCJ-yh-itC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lHz-ks-chV"/>
-                            <constraint firstAttribute="trailing" secondItem="aCJ-yh-itC" secondAttribute="trailing" id="puC-EB-QJD"/>
-                            <constraint firstItem="9Tf-BW-og0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="46" id="qxo-cI-k4I"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aCJ-yh-itC" secondAttribute="bottom" id="stE-tw-FFa"/>
-                            <constraint firstItem="9lY-Kd-UGp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tTH-uB-Y22"/>
-                            <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tU7-W9-P07"/>
-                            <constraint firstItem="4HV-8v-2tv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wbf-C0-0E9"/>
+                            <constraint firstAttribute="trailing" secondItem="aCJ-yh-itC" secondAttribute="trailing" id="49I-r9-0aS"/>
+                            <constraint firstItem="aCJ-yh-itC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="4JD-xh-vE4"/>
+                            <constraint firstItem="3jJ-qd-rp2" firstAttribute="top" secondItem="4HV-8v-2tv" secondAttribute="bottom" constant="1" id="Cqe-ym-XpZ"/>
+                            <constraint firstItem="4HV-8v-2tv" firstAttribute="top" secondItem="9lY-Kd-UGp" secondAttribute="bottom" constant="1" id="ECn-gj-I8C"/>
+                            <constraint firstItem="9lY-Kd-UGp" firstAttribute="top" secondItem="QR7-2Z-h6K" secondAttribute="bottom" constant="1" id="F7X-GA-2u3"/>
+                            <constraint firstItem="4HV-8v-2tv" firstAttribute="centerX" secondItem="3jJ-qd-rp2" secondAttribute="centerX" id="Fhl-J8-TDh"/>
+                            <constraint firstItem="aCJ-yh-itC" firstAttribute="centerX" secondItem="4HV-8v-2tv" secondAttribute="centerX" id="HOH-X3-Vy2"/>
+                            <constraint firstItem="QR7-2Z-h6K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="223" id="Iz3-MX-tud"/>
+                            <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerX" secondItem="9Tf-BW-og0" secondAttribute="centerX" id="Vly-hH-eXk"/>
+                            <constraint firstItem="9lY-Kd-UGp" firstAttribute="centerX" secondItem="4HV-8v-2tv" secondAttribute="centerX" id="ZFs-XZ-x4M"/>
+                            <constraint firstItem="aCJ-yh-itC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ic4-0K-f5X"/>
+                            <constraint firstItem="QR7-2Z-h6K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="qiz-fe-tXA"/>
+                            <constraint firstItem="9Tf-BW-og0" firstAttribute="top" secondItem="3jJ-qd-rp2" secondAttribute="bottom" constant="1" id="ybK-nH-qxm"/>
+                            <constraint firstItem="aCJ-yh-itC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ycc-iS-zvc"/>
                         </constraints>
                     </view>
                 </viewController>

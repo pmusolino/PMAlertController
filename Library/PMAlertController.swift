@@ -10,6 +10,7 @@ import UIKit
 
 @objc public enum PMAlertControllerStyle : Int {
     case Alert // The alert will adopt a width of 270 (like UIAlertController).
+    case AlertWithBlur //Adds a blur to the background (Requires iOS 8.0)
     case Walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
 }
 
@@ -30,6 +31,8 @@ import UIKit
     
     public var gravityDismissAnimation = true
     
+    private var blurEffect: UIBlurEffect!
+    private var blurView: UIVisualEffectView!
     
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
@@ -52,6 +55,16 @@ import UIKit
         //if alert width = 270, else width = screen width - 36
         style == .Alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.mainScreen().bounds.width - 36)
         
+        //check if style is blur
+        if style == .AlertWithBlur {
+            blurEffect = UIBlurEffect(style: .Dark)
+            blurView = UIVisualEffectView(effect: blurEffect)
+            
+            blurView.frame = view.bounds
+            blurView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+            view.insertSubview(blurView, belowSubview: alertView)
+            print("Added Blur")
+        }
         
         setShadowAlertView()
     }
