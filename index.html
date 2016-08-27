@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>PMAlertController by Codeido</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>PMAlertController</h1>
+        <p>PMAlertController is a great and customizable substitute to UIAlertController</p>
+
+        <p class="view"><a href="https://github.com/Codeido/PMAlertController">View the Project on GitHub <small>Codeido/PMAlertController</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Codeido/PMAlertController/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Codeido/PMAlertController/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Codeido/PMAlertController">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p align="center">
+  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/logo_pmalertcontroller.png" alt="Icon">
+</p>
+  
+
+<p><a href=""><img src="https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat" alt="Language"></a>
+  <a href="https://github.com/Codeido/PMAlertController/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/PMAlertController.svg" alt="GitHub license"></a>
+  <a href="https://cocoapods.org/pods/PMAlertController"><img src="https://badge.fury.io/co/PMAlertController.svg" alt="Pod version"></a>
+  <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a></p>
+
+<p>PMAlertController is a small library that allows you to substitute Apple's uncustomizable <code>UIAlertController</code>, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.jpg" width="500" alt="Icon">
+</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<hr>
+
+<ul>
+<li>[x] Header Image (Optional)</li>
+<li>[x] Title</li>
+<li>[x] Description message</li>
+<li>[x] Customizations: fonts, colors, dimensions &amp; more</li>
+<li>[x] 1, 2 buttons (horizontally) or 3+ buttons (vertically)</li>
+<li>[x] Closure when a button is pressed</li>
+<li>[x] Similar implementation to UIAlertController</li>
+<li>[x] Cocoapods</li>
+<li>[x] Carthage</li>
+<li>[x] Animation with UIKit Dynamics</li>
+<li>[x] Objective-C compatibility</li>
+<li>[x] Swift 3 support (in progress): <a href="https://github.com/Codeido/PMAlertController/tree/swift3">https://github.com/Codeido/PMAlertController/tree/swift3</a>
+</li>
+</ul>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h2>
+
+<hr>
+
+<ul>
+<li>iOS 9.0+</li>
+<li>Xcode 7.3+</li>
+</ul>
+
+<h2>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CocoaPods</h2>
+
+<hr>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ gem install cocoapods</pre></div>
+
+<p>To integrate PMAlertController into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+
+<div class="highlight highlight-source-ruby"><pre>source <span class="pl-s"><span class="pl-pds">'</span>https://github.com/CocoaPods/Specs.git<span class="pl-pds">'</span></span>
+platform <span class="pl-c1">:ios</span>, <span class="pl-s"><span class="pl-pds">'</span>9.0<span class="pl-pds">'</span></span>
+use_frameworks!
+
+pod <span class="pl-s"><span class="pl-pds">'</span>PMAlertController<span class="pl-pds">'</span></span></pre></div>
+
+<p>Then, run the following command:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ pod install</pre></div>
+
+<h2>
+<a id="carthage" class="anchor" href="#carthage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Carthage</h2>
+
+<hr>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ brew update
+$ brew install carthage</pre></div>
+
+<p>To integrate PMAlertController into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+
+<pre lang="ogdl"><code>github "Codeido/PMAlertController"
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework and drag the built <code>PMAlertController.framework</code> into your Xcode project.</p>
+
+<h2>
+<a id="manually" class="anchor" href="#manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manually</h2>
+
+<hr>
+
+<ol>
+<li>Download and drop <code>/Library</code> folder in your project.<br>
+</li>
+<li>Congratulations!<br>
+</li>
+</ol>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<hr>
+
+<p>The usage is very similar to <code>UIAlertController</code>.
+<code>PMAlertController</code> has two styles: Alert &amp; Walkthrough.</p>
+
+<p><strong>Alert Style:</strong> with this style, the alert has the width of 270 points, like Apple's <code>UIAlertController</code>.</p>
+
+<p><strong>Walkthrough Style:</strong> with walkthrough, the alert has the width of the screen minus 18 points from the left and the right bounds. This mode is intended to be used before authorization requests like the ones for position, push notifications and more.</p>
+
+<h4>
+<a id="show-a-simple-alert-with-two-button" class="anchor" href="#show-a-simple-alert-with-two-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Show a simple alert with two button</h4>
+
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">let</span> alertVC <span class="pl-k">=</span> PMAlertController(title: <span class="pl-s"><span class="pl-pds">"</span>A Title<span class="pl-pds">"</span></span>, description: <span class="pl-s"><span class="pl-pds">"</span>My Description<span class="pl-pds">"</span></span>, image: UIImage(named: <span class="pl-s"><span class="pl-pds">"</span>img.png<span class="pl-pds">"</span></span>), style: <span class="pl-k">.</span>Alert)
+
+alertVC<span class="pl-k">.</span>addAction(PMAlertAction(title: <span class="pl-s"><span class="pl-pds">"</span>Cancel<span class="pl-pds">"</span></span>, style: <span class="pl-k">.</span>Cancel, action: { () <span class="pl-k">-&gt;</span> <span class="pl-c1">Void</span> <span class="pl-k">in</span>
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Capture action Cancel<span class="pl-pds">"</span></span>)
+}))
+
+alertVC<span class="pl-k">.</span>addAction(PMAlertAction(title: <span class="pl-s"><span class="pl-pds">"</span>OK<span class="pl-pds">"</span></span>, style: <span class="pl-k">.</span>Default, action: { () <span class="pl-k">in</span>
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Capture action OK<span class="pl-pds">"</span></span>)
+}))
+
+<span class="pl-k">self</span><span class="pl-k">.</span>presentViewController(alertVC, animated: <span class="pl-c1">true</span>, completion: <span class="pl-c1">nil</span>)</pre></div>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ul>
+<li>If you <strong>need help</strong> or you'd like to <strong>ask a general question</strong>, open an issue.</li>
+<li>If you <strong>found a bug</strong>, open an issue.</li>
+<li>If you <strong>have a feature request</strong>, open an issue.</li>
+<li>If you <strong>want to contribute</strong>, submit a pull request.</li>
+</ul>
+
+<h2>
+<a id="acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgements</h2>
+
+<p>Made with <g-emoji alias="heart" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2764.png">❤️</g-emoji> by <a href="https://github.com/Codeido">Paolo Musolino</a>.
+The design is inspired by the <a href="https://itunes.apple.com/app/musement-tours-attractions/id828471190">Musement App</a>. The flag icon on the demo app is by <a href="http://freepik.com">Freepik</a>.</p>
+
+<h2>
+<a id="mit-license" class="anchor" href="#mit-license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MIT License</h2>
+
+<hr>
+
+<p>PMAlertController is available under the MIT license. See the LICENSE file for more info.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Codeido">Codeido</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
