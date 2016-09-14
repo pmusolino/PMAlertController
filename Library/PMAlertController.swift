@@ -25,7 +25,7 @@ import UIKit
     @IBOutlet weak public var alertDescription: UILabel!
     @IBOutlet weak public var alertActionStackView: UIStackView!
     @IBOutlet weak public var alertStackViewHeightConstraint: NSLayoutConstraint!
-    public var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main().bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
+    public var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
     public var gravityDismissAnimation = true
@@ -49,7 +49,7 @@ import UIKit
         
         
         //if alert width = 270, else width = screen width - 36
-        style == .alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.main().bounds.width - 36)
+        style == .alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.main.bounds.width - 36)
         
         
         setShadowAlertView()
@@ -88,10 +88,10 @@ import UIKit
     @objc private func loadNibAlertController() -> [AnyObject]?{
         let podBundle = Bundle(for: self.classForCoder)
         
-        if let bundleURL = podBundle.urlForResource("PMAlertController", withExtension: "bundle") {
+        if let bundleURL = podBundle.url(forResource: "PMAlertController", withExtension: "bundle"){
             
             if let bundle = Bundle(url: bundleURL) {
-                return bundle.loadNibNamed("PMAlertController", owner: self, options: nil)
+                return bundle.loadNibNamed("PMAlertController", owner: self, options: nil) as [AnyObject]?
             }
             else {
                 assertionFailure("Could not load the bundle")

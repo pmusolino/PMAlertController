@@ -37,7 +37,7 @@ import UIKit
         self.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 17)
         
         self.actionStyle = style
-        style == .default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), for: UIControlState())) : (self.setTitleColor(UIColor.gray(), for: UIControlState()))
+        style == .default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), for: UIControlState())) : (self.setTitleColor(UIColor.gray, for: UIControlState()))
         
         self.addSeparator()
     }
@@ -51,7 +51,7 @@ import UIKit
     }
     
     @objc private func addSeparator(){
-        separator.backgroundColor = UIColor.lightGray().withAlphaComponent(0.2)
+        separator.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
         self.addSubview(separator)
         
         // Autolayout separator
