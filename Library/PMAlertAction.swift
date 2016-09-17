@@ -14,11 +14,11 @@ import UIKit
     case cancel
 }
 
-@objc public class PMAlertAction: UIButton {
+@objc open class PMAlertAction: UIButton {
     
-    private var action: (() -> Void)?
+    fileprivate var action: (() -> Void)?
     
-    public var actionStyle : PMAlertActionStyle
+    open var actionStyle : PMAlertActionStyle
     
     var separator = UIImageView()
     
@@ -50,7 +50,7 @@ import UIKit
         self.action?()
     }
     
-    @objc private func addSeparator(){
+    @objc fileprivate func addSeparator(){
         separator.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
         self.addSubview(separator)
         

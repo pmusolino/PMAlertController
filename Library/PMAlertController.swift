@@ -13,22 +13,22 @@ import UIKit
     case walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
 }
 
-@objc public class PMAlertController: UIViewController {
+@objc open class PMAlertController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak public var alertMaskBackground: UIImageView!
-    @IBOutlet weak public var alertView: UIView!
-    @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var alertImage: UIImageView!
-    @IBOutlet weak public var alertImageHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var alertTitle: UILabel!
-    @IBOutlet weak public var alertDescription: UILabel!
-    @IBOutlet weak public var alertActionStackView: UIStackView!
-    @IBOutlet weak public var alertStackViewHeightConstraint: NSLayoutConstraint!
-    public var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
+    @IBOutlet weak open var alertMaskBackground: UIImageView!
+    @IBOutlet weak open var alertView: UIView!
+    @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var alertImage: UIImageView!
+    @IBOutlet weak open var alertImageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var alertTitle: UILabel!
+    @IBOutlet weak open var alertDescription: UILabel!
+    @IBOutlet weak open var alertActionStackView: UIStackView!
+    @IBOutlet weak open var alertStackViewHeightConstraint: NSLayoutConstraint!
+    open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
-    public var gravityDismissAnimation = true
+    open var gravityDismissAnimation = true
     
     
     //MARK: - Initialiser
@@ -56,7 +56,7 @@ import UIKit
     }
     
     //MARK: - Actions
-    @objc public func addAction(_ alertAction: PMAlertAction){
+    @objc open func addAction(_ alertAction: PMAlertAction){
         alertActionStackView.addArrangedSubview(alertAction)
         
         if alertActionStackView.arrangedSubviews.count > 2{
@@ -72,20 +72,20 @@ import UIKit
         
     }
     
-    @objc private func dismissAlertController(_ sender: PMAlertAction){
+    @objc fileprivate func dismissAlertController(_ sender: PMAlertAction){
         self.animateDismissWithGravity(sender.actionStyle)
         self.dismiss(animated: true, completion: nil)
     }
     
     //MARK: - Customizations
-    @objc private func setShadowAlertView(){
+    @objc fileprivate func setShadowAlertView(){
         alertView.layer.masksToBounds = false
         alertView.layer.shadowOffset = CGSize(width: 0, height: 0)
         alertView.layer.shadowRadius = 8
         alertView.layer.shadowOpacity = 0.3
     }
     
-    @objc private func loadNibAlertController() -> [AnyObject]?{
+    @objc fileprivate func loadNibAlertController() -> [AnyObject]?{
         let podBundle = Bundle(for: self.classForCoder)
         
         if let bundleURL = podBundle.url(forResource: "PMAlertController", withExtension: "bundle"){
@@ -109,7 +109,7 @@ import UIKit
     
     //MARK: - Animations
     
-    @objc private func animateDismissWithGravity(_ style: PMAlertActionStyle){
+    @objc fileprivate func animateDismissWithGravity(_ style: PMAlertActionStyle){
         if gravityDismissAnimation == true{
             var radian = M_PI
             if style == .default {
