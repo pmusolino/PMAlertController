@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,12 +10,13 @@
                 <outlet property="alertActionStackView" destination="WJc-5g-auJ" id="6ho-4f-C1R"/>
                 <outlet property="alertDescription" destination="BaL-rf-G7t" id="oA9-n7-8tS"/>
                 <outlet property="alertImage" destination="Rwc-nf-sc4" id="9c2-Rv-Z2W"/>
-                <outlet property="alertImageHeightConstraint" destination="whE-Aq-Gb6" id="Rfx-Op-WWg"/>
                 <outlet property="alertMaskBackground" destination="QvX-0K-co6" id="U8C-Dt-d5N"/>
                 <outlet property="alertStackViewHeightConstraint" destination="sZH-1X-biu" id="air-m7-rmW"/>
                 <outlet property="alertTitle" destination="boW-P6-B3N" id="Q1I-HI-El2"/>
                 <outlet property="alertView" destination="dEl-s8-6vU" id="sSB-hF-osA"/>
                 <outlet property="alertViewWidthConstraint" destination="2KX-8C-U18" id="7hM-KT-GdH"/>
+                <outlet property="headerView" destination="jTz-eN-yAz" id="10g-pC-ZH9"/>
+                <outlet property="headerViewHeightConstraint" destination="mA2-xx-mfB" id="1GQ-Wz-iVX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,11 +30,18 @@
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-s8-6vU">
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-nf-sc4">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-eN-yAz" userLabel="Header View">
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-nf-sc4">
+                                    <frame key="frameInset" minY="-0.5" width="357" height="180"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="180" id="whE-Aq-Gb6"/>
+                                <constraint firstAttribute="height" constant="180" id="mA2-xx-mfB"/>
                             </constraints>
-                        </imageView>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boW-P6-B3N">
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -60,21 +68,21 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="Rwc-nf-sc4" firstAttribute="top" secondItem="dEl-s8-6vU" secondAttribute="top" constant="8" id="0dQ-To-LNx"/>
                         <constraint firstItem="BaL-rf-G7t" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="1e4-wO-qFm"/>
-                        <constraint firstAttribute="width" constant="339" id="2KX-8C-U18"/>
-                        <constraint firstItem="Rwc-nf-sc4" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="9Tb-Ve-DYU"/>
-                        <constraint firstItem="boW-P6-B3N" firstAttribute="top" secondItem="Rwc-nf-sc4" secondAttribute="bottom" constant="10" id="CfL-8C-VDW"/>
+                        <constraint firstAttribute="width" constant="357" id="2KX-8C-U18"/>
+                        <constraint firstItem="jTz-eN-yAz" firstAttribute="top" secondItem="dEl-s8-6vU" secondAttribute="top" constant="8" id="AT5-Y6-bpb"/>
                         <constraint firstAttribute="trailing" secondItem="BaL-rf-G7t" secondAttribute="trailing" constant="8" id="DOm-G9-Two"/>
+                        <constraint firstAttribute="trailing" secondItem="jTz-eN-yAz" secondAttribute="trailing" id="Ddd-hz-T8q"/>
                         <constraint firstAttribute="bottom" secondItem="WJc-5g-auJ" secondAttribute="bottom" id="P7Y-tt-2D9"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="PzO-yc-cQ1"/>
                         <constraint firstItem="WJc-5g-auJ" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Qvh-W5-xGk"/>
                         <constraint firstAttribute="trailing" secondItem="boW-P6-B3N" secondAttribute="trailing" constant="8" id="SND-Z1-FOC"/>
                         <constraint firstItem="boW-P6-B3N" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="WdL-bT-Fz2"/>
+                        <constraint firstItem="jTz-eN-yAz" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Xmp-HN-MqT"/>
                         <constraint firstItem="BaL-rf-G7t" firstAttribute="top" secondItem="boW-P6-B3N" secondAttribute="bottom" constant="8" id="aGA-Q3-kPo"/>
                         <constraint firstAttribute="trailing" secondItem="WJc-5g-auJ" secondAttribute="trailing" id="bPd-4c-qNR"/>
-                        <constraint firstAttribute="trailing" secondItem="Rwc-nf-sc4" secondAttribute="trailing" id="fIA-Se-PAG"/>
                         <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="BaL-rf-G7t" secondAttribute="bottom" constant="8" id="fJD-P4-UWd"/>
+                        <constraint firstItem="boW-P6-B3N" firstAttribute="top" secondItem="jTz-eN-yAz" secondAttribute="bottom" constant="10" id="ig2-Tg-QbJ"/>
                     </constraints>
                 </view>
             </subviews>
@@ -87,7 +95,6 @@
                 <constraint firstAttribute="bottom" secondItem="QvX-0K-co6" secondAttribute="bottom" id="jhD-Oy-cte"/>
                 <constraint firstItem="QvX-0K-co6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nbk-z4-Mys"/>
             </constraints>
-            <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>
 </document>
