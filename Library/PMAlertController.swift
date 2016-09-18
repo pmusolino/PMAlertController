@@ -19,8 +19,9 @@ import UIKit
     @IBOutlet weak open var alertMaskBackground: UIImageView!
     @IBOutlet weak open var alertView: UIView!
     @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var headerView: UIView!
+    @IBOutlet weak open var headerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertImage: UIImageView!
-    @IBOutlet weak open var alertImageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertTitle: UILabel!
     @IBOutlet weak open var alertDescription: UILabel!
     @IBOutlet weak open var alertActionStackView: UIStackView!
@@ -43,7 +44,7 @@ import UIKit
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         alertView.layer.cornerRadius = 5
-        (image != nil) ? (alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
+        (image != nil) ? (alertImage.image = image) : (headerViewHeightConstraint.constant = 0)
         alertTitle.text = title
         alertDescription.text = description
         
