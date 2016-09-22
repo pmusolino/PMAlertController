@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -66,13 +66,27 @@
                                     <action selector="showWalkthroughWith3Buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8f6-eh-MeW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoA-fU-ZBo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5x0-Qc-aGD"/>
+                                    <constraint firstAttribute="width" constant="200" id="RiG-o2-CaQ"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert w/ TextField">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertWithTextEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MWL-bK-Dc4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aCJ-yh-itC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5pH-xQ-WnV"/>
                             <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="9fd-Tk-8mu"/>
                             <constraint firstItem="9lY-Kd-UGp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-47" id="Gmy-62-kNv"/>
+                            <constraint firstItem="BoA-fU-ZBo" firstAttribute="centerX" secondItem="aCJ-yh-itC" secondAttribute="centerX" id="OIZ-3n-yeZ"/>
                             <constraint firstItem="4HV-8v-2tv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-16" id="cFf-kC-er2"/>
+                            <constraint firstItem="BoA-fU-ZBo" firstAttribute="centerY" secondItem="aCJ-yh-itC" secondAttribute="centerY" constant="77" id="dpe-RJ-Bag"/>
                             <constraint firstItem="9Tf-BW-og0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h6x-7g-Wc3"/>
                             <constraint firstItem="aCJ-yh-itC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lHz-ks-chV"/>
                             <constraint firstAttribute="trailing" secondItem="aCJ-yh-itC" secondAttribute="trailing" id="puC-EB-QJD"/>

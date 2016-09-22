@@ -29,6 +29,8 @@ import UIKit
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
+    open var textFields: [UITextField] = []
+    
     open var gravityDismissAnimation = true
     
     
@@ -56,11 +58,28 @@ import UIKit
         setShadowAlertView()
     }
     
+    //MARK: - Text Fields
+    @objc open func addTextField(_ configuration: (_ textField: UITextField?) -> Void){
+        let textField = UITextField()
+        configuration (textField)
+        _addTextField(textField)
+    }
+    func _addTextField(_ textField: UITextField){
+        alertActionStackView.addArrangedSubview(textField)
+        alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
+        alertActionStackView.axis = .vertical
+        textFields.append(textField)
+    }
+    
+    func hasTextFieldAdded () -> Bool{
+        return textFields.count > 0
+    }
+    
     //MARK: - Actions
     @objc open func addAction(_ alertAction: PMAlertAction){
         alertActionStackView.addArrangedSubview(alertAction)
         
-        if alertActionStackView.arrangedSubviews.count > 2{
+        if alertActionStackView.arrangedSubviews.count > 2 || hasTextFieldAdded(){
             alertStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
             alertActionStackView.axis = .vertical
         }

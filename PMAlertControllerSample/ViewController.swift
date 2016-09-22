@@ -89,4 +89,17 @@ class ViewController: UIViewController {
         
         self.present(alertVC, animated: true, completion: nil)
     }
+    
+    @IBAction func showAlertWithTextEntry(_ sender: AnyObject) {
+        let alertVC = PMAlertController(title: "Enter your device location", description: "If your device can't be found, you can manually enter its location, so our Sentinel Robots know where to find it", image: UIImage(named: "flag.png"), style: .alert);
+        alertVC.addTextField { (textField) in
+            textField?.placeholder = "Location..."
+            textField?.textAlignment = .center
+        }
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel));
+        alertVC.addAction(PMAlertAction(title: "Ok", style: .cancel, action: { () in
+            print ( alertVC.textFields[0].text )
+        }));
+        self.present(alertVC, animated: true, completion: nil)
+    }
 }
