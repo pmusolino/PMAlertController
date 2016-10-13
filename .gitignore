@@ -1,2 +1,3 @@
 *.xcbkptlist
 PMAlertController.xcodeproj/project.xcworkspace/xcuserdata
+Carthage/
