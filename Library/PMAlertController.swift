@@ -18,9 +18,7 @@ import UIKit
     // MARK: Properties
     @IBOutlet weak open var alertMaskBackground: UIImageView!
     @IBOutlet weak open var alertView: UIView!
-    @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak open var headerView: UIView!
-    @IBOutlet weak open var headerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertImage: UIImageView!
     @IBOutlet weak open var alertTitle: UILabel!
     @IBOutlet weak open var alertDescription: UILabel!
@@ -28,7 +26,23 @@ import UIKit
     @IBOutlet weak open var alertStackViewHeightConstraint: NSLayoutConstraint!
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
-    
+
+    // constraint
+    // alert
+    @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
+    // header
+    @IBOutlet weak var marginTopHeaderViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var headerViewHeightConstraint: NSLayoutConstraint!
+    // title label
+    @IBOutlet weak var marginTopTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak var marginLeftTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak var marginRightTitleLabelConstraint: NSLayoutConstraint!
+    // description label
+    @IBOutlet weak var marginTopDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak var marginLeftDescriptionLabelConsrraint: NSLayoutConstraint!
+    @IBOutlet weak var marginRightDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak var marginBottonDescriptionLabelConstraint: NSLayoutConstraint!
+
     open var gravityDismissAnimation = true
     
     
