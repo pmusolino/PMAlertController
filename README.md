@@ -30,6 +30,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Animation with UIKit Dynamics
 - [x] Objective-C compatibility
 - [x] Swift 2.3 & Swift 3 support
+- [] Swift Package Manager
 
 
 ## Requirements
