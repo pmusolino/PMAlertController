@@ -18,7 +18,6 @@ import UIKit
     // MARK: Properties
     @IBOutlet weak open var alertMaskBackground: UIImageView!
     @IBOutlet weak open var alertView: UIView!
-    @IBOutlet weak open var headerView: UIView!
     @IBOutlet weak open var alertImage: UIImageView!
     @IBOutlet weak open var alertTitle: UILabel!
     @IBOutlet weak open var alertDescription: UILabel!
@@ -31,20 +30,18 @@ import UIKit
     // alert
     @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
     // header
-    @IBOutlet weak var marginTopHeaderViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak open var headerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var alertImageHeightConstraint: NSLayoutConstraint!
     // title label
-    @IBOutlet weak var marginTopTitleLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak var marginLeftTitleLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak var marginRightTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginTopTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginLeftTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginRightTitleLabelConstraint: NSLayoutConstraint!
     // description label
-    @IBOutlet weak var marginTopDescriptionLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak var marginLeftDescriptionLabelConsrraint: NSLayoutConstraint!
-    @IBOutlet weak var marginRightDescriptionLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak var marginBottonDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginTopDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginLeftDescriptionLabelConsrraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginRightDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginBottonDescriptionLabelConstraint: NSLayoutConstraint!
 
     open var gravityDismissAnimation = true
-    
     
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
@@ -58,7 +55,7 @@ import UIKit
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         alertView.layer.cornerRadius = 5
-        (image != nil) ? (alertImage.image = image) : (headerViewHeightConstraint.constant = 0)
+        (image != nil) ? (alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
         alertTitle.text = title
         alertDescription.text = description
         
