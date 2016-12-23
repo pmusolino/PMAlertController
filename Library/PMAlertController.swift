@@ -18,9 +18,6 @@ import UIKit
     // MARK: Properties
     @IBOutlet weak open var alertMaskBackground: UIImageView!
     @IBOutlet weak open var alertView: UIView!
-    @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak open var headerView: UIView!
-    @IBOutlet weak open var headerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertImage: UIImageView!
     @IBOutlet weak open var alertTitle: UILabel!
     @IBOutlet weak open var alertDescription: UILabel!
@@ -30,7 +27,20 @@ import UIKit
     var animator : UIDynamicAnimator?
     
     open var gravityDismissAnimation = true
-    
+
+    // alert
+    @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
+    // Header View
+    @IBOutlet weak public var alertImageHeightConstraint: NSLayoutConstraint!
+    // title label
+    @IBOutlet weak public var marginTopTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginLeftTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginRightTitleLabelConstraint: NSLayoutConstraint!
+    // description label
+    @IBOutlet weak public var marginTopDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginLeftDescriptionLabelConsrraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginRightDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak public var marginBottonDescriptionLabelConstraint: NSLayoutConstraint!
     
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
@@ -44,7 +54,7 @@ import UIKit
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         alertView.layer.cornerRadius = 5
-        (image != nil) ? (alertImage.image = image) : (headerViewHeightConstraint.constant = 0)
+        (image != nil) ? (alertImage.image = image) : (alertImageHeightConstraint.constant = 0)
         alertTitle.text = title
         alertDescription.text = description
         
