@@ -3,7 +3,7 @@
 </p>
   
  
-  [![Language](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)]()
+  [![Language](https://img.shields.io/badge/Swift-2.3%20%26%203.0-orange.svg)]()
   [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/Codeido/PMAlertController/blob/master/LICENSE)
   [![Pod version](https://badge.fury.io/co/PMAlertController.svg)](https://cocoapods.org/pods/PMAlertController)
   [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -17,6 +17,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 ## Features
 ----------------
 
+- [x] Header View
 - [x] Header Image (Optional)
 - [x] Title
 - [x] Description message
@@ -28,13 +29,14 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Carthage
 - [x] Animation with UIKit Dynamics
 - [x] Objective-C compatibility
-- [x] Swift 3 support (in progress): https://github.com/Codeido/PMAlertController/tree/swift3
+- [x] Swift 2.3 & Swift 3 support
+
 
 ## Requirements
 ----------------
 
 - iOS 9.0+
-- Xcode 7.3+
+- Xcode 8+
 
 ## CocoaPods
 ----------------
@@ -99,18 +101,28 @@ The usage is very similar to `UIAlertController`.
 #### Show a simple alert with two button
 
 ```swift
-let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), style: .Alert)
+//This code works with Swift 3
 
-alertVC.addAction(PMAlertAction(title: "Cancel", style: .Cancel, action: { () -> Void in
-    print("Capture action Cancel")
-}))
+let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), style: .alert)
 
-alertVC.addAction(PMAlertAction(title: "OK", style: .Default, action: { () in
-    print("Capture action OK")
-}))
+alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
+            print("Capture action Cancel")
+        }))
+        
+alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: { () in
+            print("Capture action OK")
+        }))
+        
+self.present(alertVC, animated: true, completion: nil)
 
-self.presentViewController(alertVC, animated: true, completion: nil)
 ```
+
+## Swift compatibility
+- If you use **Swift 3.0**, you can use the [latest release](https://github.com/Codeido/PMAlertController/releases).
+
+- If you use **Swift 2.3**, you can use the [release 1.1.0](https://github.com/Codeido/PMAlertController/releases/tag/1.1.0)
+
+- If you use **Swift 2.2**, you can use the [release 1.0.5](https://github.com/Codeido/PMAlertController/releases/tag/1.0.5)
 
 
 ## Contributing
