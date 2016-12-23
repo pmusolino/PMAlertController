@@ -25,22 +25,23 @@ import UIKit
     @IBOutlet weak open var alertStackViewHeightConstraint: NSLayoutConstraint!
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
-    
-    open var gravityDismissAnimation = true
 
+    // constraint
     // alert
-    @IBOutlet weak public var alertViewWidthConstraint: NSLayoutConstraint!
-    // Header View
-    @IBOutlet weak public var alertImageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
+    // header
+    @IBOutlet weak open var alertImageHeightConstraint: NSLayoutConstraint!
     // title label
-    @IBOutlet weak public var marginTopTitleLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var marginLeftTitleLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var marginRightTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginTopTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginLeftTitleLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginRightTitleLabelConstraint: NSLayoutConstraint!
     // description label
-    @IBOutlet weak public var marginTopDescriptionLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var marginLeftDescriptionLabelConsrraint: NSLayoutConstraint!
-    @IBOutlet weak public var marginRightDescriptionLabelConstraint: NSLayoutConstraint!
-    @IBOutlet weak public var marginBottonDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginTopDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginLeftDescriptionLabelConsrraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginRightDescriptionLabelConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var marginBottonDescriptionLabelConstraint: NSLayoutConstraint!
+
+    open var gravityDismissAnimation = true
     
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
