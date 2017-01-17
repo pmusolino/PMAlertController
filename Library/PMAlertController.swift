@@ -33,6 +33,20 @@ import UIKit
     
     open var gravityDismissAnimation = true
     
+    //MARK: - Lifecycle
+    
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
+    }
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
     
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
@@ -61,6 +75,8 @@ import UIKit
     //MARK: - Text Fields
     @objc open func addTextField(_ configuration: (_ textField: UITextField?) -> Void){
         let textField = UITextField()
+        textField.delegate = self
+        textField.returnKeyType = .done
         configuration (textField)
         _addTextField(textField)
     }
@@ -148,5 +164,46 @@ import UIKit
             itemBehavior.addAngularVelocity(CGFloat(radian), for: alertView)
             animator?.addBehavior(itemBehavior)
         }
+    }
+    
+    //MARK: - Keyboard avoiding
+    
+    var tempFrameOrigin: CGPoint?
+    var keyboardHasBeenShown:Bool = false
+    
+    func keyboardWillShow(_ notification: Notification) {
+        keyboardHasBeenShown = true
+        
+        guard let userInfo = (notification as NSNotification).userInfo else {return}
+        guard let endKeyBoardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.minY else {return}
+        
+        if tempFrameOrigin == nil {
+            tempFrameOrigin = alertView.frame.origin
+        }
+        
+        var newContentViewFrameY = alertView.frame.maxY - endKeyBoardFrame
+        if newContentViewFrameY < 0 {
+            newContentViewFrameY = 0
+        }
+        alertView.frame.origin.y -= newContentViewFrameY
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        if (keyboardHasBeenShown) { // Only on the simulator (keyboard will be hidden)
+            if (tempFrameOrigin != nil){
+                alertView.frame.origin.y = tempFrameOrigin!.y
+                tempFrameOrigin = nil
+            }
+            
+            keyboardHasBeenShown = false
+        }
+    }
+}
+
+extension PMAlertController: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
 }
