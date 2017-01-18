@@ -100,7 +100,7 @@ The usage is very similar to `UIAlertController`.
 
 **Walkthrough Style:** with walkthrough, the alert has the width of the screen minus 18 points from the left and the right bounds. This mode is intended to be used before authorization requests like the ones for position, push notifications and more.
 
-#### Show a simple alert with two button
+#### Show a simple alert with two buttons and one textfield
 
 ```swift
 //This code works with Swift 3
