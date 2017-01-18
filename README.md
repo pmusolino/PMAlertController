@@ -11,7 +11,7 @@
 PMAlertController is a small library that allows you to substitute Apple's uncustomizable `UIAlertController`, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.png" width=500 alt="Icon"/>
+  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.png" width=800 alt="Icon"/>
 </p>
 
 ## Features
@@ -24,6 +24,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Customizations: fonts, colors, dimensions & more
 - [x] 1, 2 buttons (horizontally) or 3+ buttons (vertically)
 - [x] Closure when a button is pressed
+- [x] Text Fields support
 - [x] Similar implementation to UIAlertController
 - [x] Cocoapods
 - [x] Carthage
@@ -113,6 +114,10 @@ alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () ->
 alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: { () in
             print("Capture action OK")
         }))
+        
+alertVC.addTextField { (textField) in
+            textField?.placeholder = "Location..."
+        }
         
 self.present(alertVC, animated: true, completion: nil)
 
