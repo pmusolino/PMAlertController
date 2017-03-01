@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "PMAlertController"
-  s.version      = "2.0.1"
+  s.version      = "2.1.0"
   s.summary      = "PMAlertController is a great and customizable substitute to UIAlertController"
   s.description  = <<-DESC
   					PMAlertController is a small library that allows you to substitute the uncustomizable UIAlertController of Apple, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
                    DESC
   s.homepage     = "https://github.com/Codeido/PMAlertController"
-  s.screenshots  = "https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.jpg"
+  s.screenshots  = "https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.png"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Paolo Musolino" => "info@codeido.com" }
   s.social_media_url   = "http://twitter.com/pmusolino"

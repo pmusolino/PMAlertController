@@ -6,12 +6,14 @@
   [![Language](https://img.shields.io/badge/Swift-2.3%20%26%203.0-orange.svg)]()
   [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/Codeido/PMAlertController/blob/master/LICENSE)
   [![Pod version](https://img.shields.io/cocoapods/v/PMAlertController.svg?style=flat)](https://cocoapods.org/pods/PMAlertController)
-  [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+  [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-yellow.svg)](https://github.com/Carthage/Carthage)
+  [![Downloads](https://img.shields.io/cocoapods/dt/PMAlertController.svg)](https://cocoapods.org/pods/PMAlertController)
+  
 
 PMAlertController is a small library that allows you to substitute Apple's uncustomizable `UIAlertController`, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.jpg" width=500 alt="Icon"/>
+  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.png" width=800 alt="Icon"/>
 </p>
 
 ## Features
@@ -24,6 +26,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Customizations: fonts, colors, dimensions & more
 - [x] 1, 2 buttons (horizontally) or 3+ buttons (vertically)
 - [x] Closure when a button is pressed
+- [x] Text Fields support
 - [x] Similar implementation to UIAlertController
 - [x] Cocoapods
 - [x] Carthage
@@ -99,7 +102,7 @@ The usage is very similar to `UIAlertController`.
 
 **Walkthrough Style:** with walkthrough, the alert has the width of the screen minus 18 points from the left and the right bounds. This mode is intended to be used before authorization requests like the ones for position, push notifications and more.
 
-#### Show a simple alert with two button
+#### Show a simple alert with two buttons and one textfield
 
 ```swift
 //This code works with Swift 3
@@ -113,6 +116,10 @@ alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () ->
 alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: { () in
             print("Capture action OK")
         }))
+        
+alertVC.addTextField { (textField) in
+            textField?.placeholder = "Location..."
+        }
         
 self.present(alertVC, animated: true, completion: nil)
 
