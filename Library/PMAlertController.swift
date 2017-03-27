@@ -162,11 +162,11 @@ import UIKit
     
     @objc fileprivate func animateDismissWithGravity(_ style: PMAlertActionStyle){
         if gravityDismissAnimation == true{
-            var radian = M_PI
+            var radian = Double.pi
             if style == .default {
-                radian = 2 * M_PI
+                radian = 2 * Double.pi
             }else{
-                radian = -2 * M_PI
+                radian = -2 * Double.pi
             }
             animator = UIDynamicAnimator(referenceView: self.view)
             
