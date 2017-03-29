@@ -126,7 +126,7 @@ self.present(alertVC, animated: true, completion: nil)
 ```
 
 ## Swift compatibility
-- If you use **Swift 3.0**, you can use the [latest release](https://github.com/Codeido/PMAlertController/releases).
+- If you use **Swift 3.0 or higher**, you can use the [latest release](https://github.com/Codeido/PMAlertController/releases).
 
 - If you use **Swift 2.3**, you can use the [release 1.1.0](https://github.com/Codeido/PMAlertController/releases/tag/1.1.0)
 
