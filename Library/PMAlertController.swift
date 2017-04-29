@@ -19,11 +19,12 @@ import UIKit
     @IBOutlet weak open var alertMaskBackground: UIImageView!
     @IBOutlet weak open var alertView: UIView!
     @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var alertViewMaxHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var headerView: UIView!
     @IBOutlet weak open var headerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertImage: UIImageView!
     @IBOutlet weak open var alertTitle: UILabel!
-    @IBOutlet weak open var alertDescription: UILabel!
+    @IBOutlet weak open var alertDescription: UITextView!
     @IBOutlet weak open var alertActionStackView: UIStackView!
     @IBOutlet weak open var alertStackViewHeightConstraint: NSLayoutConstraint!
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
@@ -38,6 +39,14 @@ import UIKit
     
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // Enable description text view scroll if alert view hits max height
+        // Edge case: Alertview might hit max height and description also fits perfectly in textview still scrolling will be enabled. But it will not be bad user experience
+        if alertView.frame.height == alertViewMaxHeightConstraint.constant {
+            alertDescription.isScrollEnabled = true
+        }
+        else {
+            alertDescription.isScrollEnabled = false
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
@@ -74,6 +83,9 @@ import UIKit
         alertMaskBackground.addGestureRecognizer(tapRecognizer)
         
         setShadowAlertView()
+        
+        // set alert view max height constraint
+        alertViewMaxHeightConstraint.constant = UIScreen.main.bounds.height-50
     }
     
     //MARK: - Actions
