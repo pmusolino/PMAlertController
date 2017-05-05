@@ -26,6 +26,8 @@ import UIKit
     @IBOutlet weak open var alertDescription: UILabel!
     @IBOutlet weak open var alertActionStackView: UIStackView!
     @IBOutlet weak open var alertStackViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
@@ -48,7 +50,21 @@ import UIKit
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
+    override open func viewDidLayoutSubviews() {
+        
+        let contentHeight = headerView.frame.size.height + calculateStringSizeWith(label: alertTitle).height + calculateStringSizeWith(label: alertDescription).height + CGFloat(alertActionStackView.arrangedSubviews.count) * ALERT_STACK_VIEW_HEIGHT
+        
+        if contentHeight >= UIScreen.main.bounds.height - 100 {
+            scrollViewHeightConstraint.constant = UIScreen.main.bounds.height - (alertActionStackView.frame.size.height + 100)
+        }
+    }
     
+    func calculateStringSizeWith(label: UILabel) -> CGSize {
+        let dict = [NSFontAttributeName: label.font!]
+        let constraintRect = CGSize(width: self.view.frame.size.width-20, height: 0)
+        let rect = label.text!.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: dict, context: nil)
+        return rect.size
+    }
     //MARK: - Initialiser
     @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
