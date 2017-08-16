@@ -100,7 +100,7 @@ The usage is very similar to `UIAlertController`.
 
 **Alert Style:** with this style, the alert has the width of 270 points, like Apple's `UIAlertController`.
 
-**Walkthrough Style:** with walkthrough, the alert has the width of the screen minus 18 points from the left and the right bounds. This mode is intended to be used before authorization requests like the ones for position, push notifications and more.
+**Walkthrough Style:** with walkthrough, the alert has the width of the screen minus 18 points from the left and the right bounds. This mode is intended to be used before authorization requests like the ones for location, push notifications and more.
 
 #### Show a simple alert with two buttons and one textfield
 
