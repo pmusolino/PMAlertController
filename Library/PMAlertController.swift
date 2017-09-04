@@ -186,7 +186,7 @@ import UIKit
     var tempFrameOrigin: CGPoint?
     var keyboardHasBeenShown:Bool = false
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         keyboardHasBeenShown = true
         
         guard let userInfo = (notification as NSNotification).userInfo else {return}
@@ -203,7 +203,7 @@ import UIKit
         alertView.frame.origin.y -= newContentViewFrameY
     }
     
-    func keyboardWillHide(_ notification: Notification) {
+    @objc func keyboardWillHide(_ notification: Notification) {
         if (keyboardHasBeenShown) { // Only on the simulator (keyboard will be hidden)
             if (tempFrameOrigin != nil){
                 alertView.frame.origin.y = tempFrameOrigin!.y
