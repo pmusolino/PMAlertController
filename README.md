@@ -3,7 +3,7 @@
 </p>
   
  
-  [![Language](https://img.shields.io/badge/Swift-2.3%20%26%203.0-orange.svg)]()
+  [![Language](https://img.shields.io/badge/Swift-3%20%26%204-orange.svg)]()
   [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/Codeido/PMAlertController/blob/master/LICENSE)
   [![Pod version](https://img.shields.io/cocoapods/v/PMAlertController.svg?style=flat)](https://cocoapods.org/pods/PMAlertController)
   [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-yellow.svg)](https://github.com/Carthage/Carthage)
@@ -32,7 +32,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Carthage
 - [x] Animation with UIKit Dynamics
 - [x] Objective-C compatibility
-- [x] Swift 2.3 & Swift 3 support
+- [x] Swift 2.3, Swift 3 and Swift 4 support
 - [ ] Swift Package Manager
 
 
@@ -40,7 +40,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 ----------------
 
 - iOS 9.0+
-- Xcode 8+
+- Xcode 9+
 
 ## CocoaPods
 ----------------
@@ -105,7 +105,7 @@ The usage is very similar to `UIAlertController`.
 #### Show a simple alert with two buttons and one textfield
 
 ```swift
-//This code works with Swift 3
+//This code works with Swift 4
 
 let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), style: .alert)
 
@@ -126,7 +126,10 @@ self.present(alertVC, animated: true, completion: nil)
 ```
 
 ## Swift compatibility
-- If you use **Swift 3.0 or higher**, you can use the [latest release](https://github.com/Codeido/PMAlertController/releases).
+
+- If you use **Swift 4.0 or higher**, you can use the [latest release](https://github.com/Codeido/PMAlertController/releases).
+
+- If you use **Swift 3**, you can use the [release 2.1.3](https://github.com/Codeido/PMAlertController/releases/tag/2.1.3).
 
 - If you use **Swift 2.3**, you can use the [release 1.1.0](https://github.com/Codeido/PMAlertController/releases/tag/1.1.0)
 
