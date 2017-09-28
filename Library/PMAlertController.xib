@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMAlertController" customModule="PMAlertController" customModuleProvider="target">
             <connections>
                 <outlet property="alertActionStackView" destination="WJc-5g-auJ" id="6ho-4f-C1R"/>
-                <outlet property="alertDescription" destination="BaL-rf-G7t" id="oA9-n7-8tS"/>
+                <outlet property="alertDescription" destination="Kxs-7Y-0JN" id="mTi-tj-mkh"/>
                 <outlet property="alertImage" destination="Rwc-nf-sc4" id="9c2-Rv-Z2W"/>
                 <outlet property="alertMaskBackground" destination="QvX-0K-co6" id="U8C-Dt-d5N"/>
                 <outlet property="alertStackViewHeightConstraint" destination="sZH-1X-biu" id="air-m7-rmW"/>
                 <outlet property="alertTitle" destination="boW-P6-B3N" id="Q1I-HI-El2"/>
                 <outlet property="alertView" destination="dEl-s8-6vU" id="sSB-hF-osA"/>
+                <outlet property="alertViewMaxHeightConstraint" destination="J73-ms-acV" id="VMA-0E-k8J"/>
                 <outlet property="alertViewWidthConstraint" destination="2KX-8C-U18" id="7hM-KT-GdH"/>
                 <outlet property="headerView" destination="jTz-eN-yAz" id="10g-pC-ZH9"/>
                 <outlet property="headerViewHeightConstraint" destination="mA2-xx-mfB" id="1GQ-Wz-iVX"/>
@@ -33,7 +34,7 @@
                     <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEl-s8-6vU">
-                    <rect key="frame" x="9" y="174.5" width="357" height="318"/>
+                    <rect key="frame" x="9" y="167" width="357" height="333.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-eN-yAz" userLabel="Header View">
                             <rect key="frame" x="0.0" y="8" width="357" height="180"/>
@@ -61,18 +62,15 @@
                             <color key="textColor" red="0.92941176469999998" green="0.59607843140000005" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaL-rf-G7t">
-                            <rect key="frame" x="8" y="229" width="341" height="21"/>
-                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="cg8-6J-yzj"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxs-7Y-0JN">
+                            <rect key="frame" x="8" y="229" width="341" height="36.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-5g-auJ">
-                            <rect key="frame" x="0.0" y="258" width="357" height="60"/>
+                            <rect key="frame" x="0.0" y="273.5" width="357" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="sZH-1X-biu"/>
                             </constraints>
@@ -80,20 +78,21 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="BaL-rf-G7t" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="1e4-wO-qFm"/>
                         <constraint firstAttribute="width" constant="357" id="2KX-8C-U18"/>
+                        <constraint firstItem="Kxs-7Y-0JN" firstAttribute="top" secondItem="boW-P6-B3N" secondAttribute="bottom" constant="8" id="6IT-j6-asa"/>
                         <constraint firstItem="jTz-eN-yAz" firstAttribute="top" secondItem="dEl-s8-6vU" secondAttribute="top" constant="8" id="AT5-Y6-bpb"/>
-                        <constraint firstAttribute="trailing" secondItem="BaL-rf-G7t" secondAttribute="trailing" constant="8" id="DOm-G9-Two"/>
                         <constraint firstAttribute="trailing" secondItem="jTz-eN-yAz" secondAttribute="trailing" id="Ddd-hz-T8q"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="450" id="J73-ms-acV"/>
                         <constraint firstAttribute="bottom" secondItem="WJc-5g-auJ" secondAttribute="bottom" id="P7Y-tt-2D9"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="PzO-yc-cQ1"/>
                         <constraint firstItem="WJc-5g-auJ" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Qvh-W5-xGk"/>
                         <constraint firstAttribute="trailing" secondItem="boW-P6-B3N" secondAttribute="trailing" constant="8" id="SND-Z1-FOC"/>
                         <constraint firstItem="boW-P6-B3N" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="WdL-bT-Fz2"/>
                         <constraint firstItem="jTz-eN-yAz" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Xmp-HN-MqT"/>
-                        <constraint firstItem="BaL-rf-G7t" firstAttribute="top" secondItem="boW-P6-B3N" secondAttribute="bottom" constant="8" id="aGA-Q3-kPo"/>
                         <constraint firstAttribute="trailing" secondItem="WJc-5g-auJ" secondAttribute="trailing" id="bPd-4c-qNR"/>
-                        <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="BaL-rf-G7t" secondAttribute="bottom" constant="8" id="fJD-P4-UWd"/>
+                        <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="Kxs-7Y-0JN" secondAttribute="bottom" constant="8" id="cYH-sS-zin"/>
+                        <constraint firstItem="Kxs-7Y-0JN" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="dCN-f8-ggu"/>
+                        <constraint firstAttribute="trailing" secondItem="Kxs-7Y-0JN" secondAttribute="trailing" constant="8" id="epg-12-ysZ"/>
                         <constraint firstItem="boW-P6-B3N" firstAttribute="top" secondItem="jTz-eN-yAz" secondAttribute="bottom" constant="10" id="ig2-Tg-QbJ"/>
                     </constraints>
                 </view>
