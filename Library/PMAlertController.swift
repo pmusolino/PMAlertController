@@ -130,19 +130,18 @@ import UIKit
         return textFields.count > 0
     }
   
-  //MARK: - Picker View
-  @objc open func addPickerView(_ pickerView: UIPickerView) {
-    self.additionalContentView.addSubview(pickerView)
-    
-    pickerView.translatesAutoresizingMaskIntoConstraints = false
-    pickerView.topAnchor.constraint(equalTo: self.additionalContentView.topAnchor, constant: 16).isActive = true
-    pickerView.leadingAnchor.constraint(equalTo: self.additionalContentView.leadingAnchor, constant: 16).isActive = true
-    pickerView.trailingAnchor.constraint(equalTo: self.additionalContentView.trailingAnchor, constant: -16).isActive = true
-    pickerView.bottomAnchor.constraint(equalTo: self.additionalContentView.bottomAnchor).isActive = true
-    self.additionalContentViewHeightConstraint.constant = pickerView.frame.size.height
-  }
+    //MARK: - Picker View
+    @objc open func addPickerView(_ pickerView: UIPickerView) {
+        self.additionalContentView.addSubview(pickerView)
+      
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        pickerView.topAnchor.constraint(equalTo: self.additionalContentView.topAnchor, constant: 8).isActive = true
+        pickerView.leadingAnchor.constraint(equalTo: self.additionalContentView.leadingAnchor, constant: 16).isActive = true
+        pickerView.trailingAnchor.constraint(equalTo: self.additionalContentView.trailingAnchor, constant: -16).isActive = true
+        pickerView.bottomAnchor.constraint(equalTo: self.additionalContentView.bottomAnchor, constant: 0).isActive = true
+        self.additionalContentViewHeightConstraint.constant = pickerView.frame.size.height
+    }
 
-    
     //MARK: - Customizations
     @objc fileprivate func setShadowAlertView(){
         alertView.layer.masksToBounds = false
