@@ -10,6 +10,9 @@ import UIKit
 import PMAlertController
 
 class ViewController: UIViewController {
+  
+    var pickerOptionsOne = ["Evil", "Super", "Incredible", "Wonder", "Sliver", "Bacon"]
+    var pickerOptionsTwo = ["Destroyer", "Man", "Daddy", "Lord", "Girl", "Astronaut"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,3 +108,41 @@ class ViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
 }
+
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource  {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 2
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    return component == 0 ? pickerOptionsOne.count : pickerOptionsTwo.count
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    return component == 0 ? pickerOptionsOne[row] : pickerOptionsTwo[row]
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    print (component == 0 ? pickerOptionsOne[row] : pickerOptionsTwo[row])
+  }
+  
+  @IBAction func showAlertWithPickerView(_ sender: UIButton) {
+    let alertVC = PMAlertController(title: "Hero Name Maker", description: "Make your very own Superhero!!", image: UIImage(named: "flag.png"), style: .alert)
+    
+    let pickerView = UIPickerView(frame: .zero)
+    pickerView.delegate = self
+    pickerView.dataSource = self
+    alertVC.addPickerView(pickerView)
+    
+    alertVC.addAction(PMAlertAction(title: "Ok", style: .default))
+    
+    self.present(alertVC, animated: true, completion: nil)
+  }
+}
+
+
+
+
+
+
+

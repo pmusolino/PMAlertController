@@ -17,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMAlertController" customModule="PMAlertController" customModuleProvider="target">
             <connections>
+                <outlet property="additionalContentView" destination="zHM-CG-3YR" id="KBR-In-bey"/>
+                <outlet property="additionalContentViewHeightConstraint" destination="Euq-re-Pia" id="niY-RF-VHM"/>
                 <outlet property="alertActionStackView" destination="WJc-5g-auJ" id="6ho-4f-C1R"/>
                 <outlet property="alertDescription" destination="BaL-rf-G7t" id="oA9-n7-8tS"/>
                 <outlet property="alertImage" destination="Rwc-nf-sc4" id="9c2-Rv-Z2W"/>
@@ -86,6 +88,13 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" id="nMw-wm-Auu"/>
                             </constraints>
                         </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHM-CG-3YR">
+                            <rect key="frame" x="0.0" y="250" width="357" height="8"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="8" id="Euq-re-Pia"/>
+                            </constraints>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-5g-auJ">
                             <rect key="frame" x="0.0" y="258" width="357" height="60"/>
                             <constraints>
@@ -98,15 +107,18 @@
                         <constraint firstAttribute="width" constant="357" id="2KX-8C-U18"/>
                         <constraint firstItem="jTz-eN-yAz" firstAttribute="top" secondItem="dEl-s8-6vU" secondAttribute="top" constant="8" id="AT5-Y6-bpb"/>
                         <constraint firstAttribute="trailing" secondItem="jTz-eN-yAz" secondAttribute="trailing" id="Ddd-hz-T8q"/>
+                        <constraint firstItem="zHM-CG-3YR" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="G2a-co-edE"/>
                         <constraint firstItem="LMB-jY-4In" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="8" id="JoG-bm-Y31"/>
                         <constraint firstAttribute="bottom" secondItem="WJc-5g-auJ" secondAttribute="bottom" id="P7Y-tt-2D9"/>
+                        <constraint firstAttribute="trailing" secondItem="zHM-CG-3YR" secondAttribute="trailing" id="Pwy-9P-a8k"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="PzO-yc-cQ1"/>
                         <constraint firstItem="WJc-5g-auJ" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Qvh-W5-xGk"/>
                         <constraint firstItem="jTz-eN-yAz" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Xmp-HN-MqT"/>
                         <constraint firstAttribute="trailing" secondItem="WJc-5g-auJ" secondAttribute="trailing" id="bPd-4c-qNR"/>
                         <constraint firstItem="LMB-jY-4In" firstAttribute="top" secondItem="jTz-eN-yAz" secondAttribute="bottom" constant="10" id="cZ2-BF-gBn"/>
                         <constraint firstAttribute="trailing" secondItem="LMB-jY-4In" secondAttribute="trailing" constant="8" id="faR-Xx-08y"/>
-                        <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="LMB-jY-4In" secondAttribute="bottom" constant="8" id="rQm-Go-qos"/>
+                        <constraint firstItem="zHM-CG-3YR" firstAttribute="top" secondItem="LMB-jY-4In" secondAttribute="bottom" id="nvc-mP-PTn"/>
+                        <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="zHM-CG-3YR" secondAttribute="bottom" id="oBv-io-jAz"/>
                     </constraints>
                 </view>
             </subviews>
