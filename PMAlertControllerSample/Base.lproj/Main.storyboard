@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -86,13 +86,28 @@
                                     <action selector="showAlertWithTextEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MWL-bK-Dc4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8n-hd-C3o">
+                                <rect key="frame" x="75" y="449.5" width="225" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6xP-TL-xPG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="gFT-vT-nxM"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert with Custom Padding">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertWithCustomPadding:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UdZ-7S-s3L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aCJ-yh-itC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5pH-xQ-WnV"/>
                             <constraint firstItem="9Tf-BW-og0" firstAttribute="top" secondItem="3jJ-qd-rp2" secondAttribute="bottom" constant="8" id="8Pr-Pu-5hK"/>
                             <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="9fd-Tk-8mu"/>
+                            <constraint firstItem="v8n-hd-C3o" firstAttribute="top" secondItem="BoA-fU-ZBo" secondAttribute="bottom" constant="10" id="DPa-dS-JRc"/>
                             <constraint firstItem="3jJ-qd-rp2" firstAttribute="top" secondItem="4HV-8v-2tv" secondAttribute="bottom" constant="8" id="GlX-Ff-iqn"/>
+                            <constraint firstItem="v8n-hd-C3o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jx6-l4-Zgd"/>
                             <constraint firstItem="BoA-fU-ZBo" firstAttribute="centerX" secondItem="aCJ-yh-itC" secondAttribute="centerX" id="OIZ-3n-yeZ"/>
                             <constraint firstItem="9Tf-BW-og0" firstAttribute="centerX" secondItem="WaF-QJ-Xl8" secondAttribute="centerX" id="h6x-7g-Wc3"/>
                             <constraint firstAttribute="bottom" secondItem="aCJ-yh-itC" secondAttribute="bottom" id="hKX-9R-uUt"/>
