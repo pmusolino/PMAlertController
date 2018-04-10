@@ -3,7 +3,7 @@
 //  PMAlertController
 //
 //  Created by Vittorio Monaco on 21/05/16.
-//  Copyright © 2016 Codeido. All rights reserved.
+//  Copyright © 2018 Codeido. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

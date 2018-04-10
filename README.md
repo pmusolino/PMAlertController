@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/logo_pmalertcontroller.png" alt="Icon"/>
+  <img src="https://raw.githubusercontent.com/pmusolino/PMAlertController/master/logo_pmalertcontroller.png" alt="Icon"/>
 </p>
   
  
   [![Language](https://img.shields.io/badge/Swift-3%20%26%204-orange.svg)]()
-  [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/Codeido/PMAlertController/blob/master/LICENSE)
+  [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/pmusolino/PMAlertController/blob/master/LICENSE)
   [![Pod version](https://img.shields.io/cocoapods/v/PMAlertController.svg?style=flat)](https://cocoapods.org/pods/PMAlertController)
   [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-yellow.svg)](https://github.com/Carthage/Carthage)
   [![Downloads](https://img.shields.io/cocoapods/dt/PMAlertController.svg)](https://cocoapods.org/pods/PMAlertController)
@@ -13,7 +13,7 @@
 PMAlertController is a small library that allows you to substitute Apple's uncustomizable `UIAlertController`, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Codeido/PMAlertController/master/preview_pmalertacontroller.png" width=800 alt="Icon"/>
+  <img src="https://raw.githubusercontent.com/pmusolino/PMAlertController/master/preview_pmalertacontroller.png" width=800 alt="Icon"/>
 </p>
 
 ## Features
@@ -83,7 +83,7 @@ $ brew install carthage
 To integrate PMAlertController into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Codeido/PMAlertController"
+github "pmusolino/PMAlertController"
 ```
 
 Run `carthage update` to build the framework and drag the built `PMAlertController.framework` into your Xcode project.
@@ -127,13 +127,13 @@ self.present(alertVC, animated: true, completion: nil)
 
 ## Swift compatibility
 
-- If you use **Swift 4.0 or higher**, you can use the [latest release](https://github.com/Codeido/PMAlertController/releases).
+- If you use **Swift 4.0 or higher**, you can use the [latest release](https://github.com/pmusolino/PMAlertController/releases).
 
-- If you use **Swift 3**, you can use the [release 2.1.3](https://github.com/Codeido/PMAlertController/releases/tag/2.1.3).
+- If you use **Swift 3**, you can use the [release 2.1.3](https://github.com/pmusolino/PMAlertController/releases/tag/2.1.3).
 
-- If you use **Swift 2.3**, you can use the [release 1.1.0](https://github.com/Codeido/PMAlertController/releases/tag/1.1.0)
+- If you use **Swift 2.3**, you can use the [release 1.1.0](https://github.com/pmusolino/PMAlertController/releases/tag/1.1.0)
 
-- If you use **Swift 2.2**, you can use the [release 1.0.5](https://github.com/Codeido/PMAlertController/releases/tag/1.0.5)
+- If you use **Swift 2.2**, you can use the [release 1.0.5](https://github.com/pmusolino/PMAlertController/releases/tag/1.0.5)
 
 
 ## Contributing
@@ -146,7 +146,7 @@ self.present(alertVC, animated: true, completion: nil)
 
 ## Acknowledgements
 
-Made with ❤️ by [Paolo Musolino](https://github.com/Codeido).
+Made with ❤️ by [Paolo Musolino](https://github.com/pmusolino).
 The design is inspired by the [Musement App](https://itunes.apple.com/app/musement-tours-attractions/id828471190). The flag icon on the demo app is by [Freepik](http://freepik.com).
 
 
