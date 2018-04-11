@@ -14,8 +14,8 @@ import UIKit
 }
 
 @objc open class PMAlertController: UIViewController {
-    
-    // MARK: Properties
+  
+  // MARK: Properties
     @IBOutlet weak open var alertMaskBackground: UIImageView!
     @IBOutlet weak open var alertView: UIView!
     @IBOutlet weak open var alertViewWidthConstraint: NSLayoutConstraint!
@@ -24,6 +24,8 @@ import UIKit
     @IBOutlet weak open var alertImage: UIImageView!
     @IBOutlet weak open var alertTitle: UILabel!
     @IBOutlet weak open var alertDescription: UILabel!
+    @IBOutlet weak open var additionalContentView: UIView!
+    @IBOutlet weak open var additionalContentViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertActionStackView: UIStackView!
     @IBOutlet weak open var alertStackViewHeightConstraint: NSLayoutConstraint!
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
@@ -126,7 +128,19 @@ import UIKit
     func hasTextFieldAdded () -> Bool{
         return textFields.count > 0
     }
-    
+  
+    //MARK: - Picker View
+    @objc open func addPickerView(_ pickerView: UIPickerView) {
+        self.additionalContentView.addSubview(pickerView)
+      
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        pickerView.topAnchor.constraint(equalTo: self.additionalContentView.topAnchor, constant: 8).isActive = true
+        pickerView.leadingAnchor.constraint(equalTo: self.additionalContentView.leadingAnchor, constant: 16).isActive = true
+        pickerView.trailingAnchor.constraint(equalTo: self.additionalContentView.trailingAnchor, constant: -16).isActive = true
+        pickerView.bottomAnchor.constraint(equalTo: self.additionalContentView.bottomAnchor, constant: 0).isActive = true
+        self.additionalContentViewHeightConstraint.constant = pickerView.frame.size.height
+    }
+
     //MARK: - Customizations
     @objc fileprivate func setShadowAlertView(){
         alertView.layer.masksToBounds = false
