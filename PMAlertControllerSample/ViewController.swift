@@ -104,4 +104,30 @@ class ViewController: UIViewController {
         
         self.present(alertVC, animated: true, completion: nil)
     }
+    
+    @IBAction func showWalkthroughWithCustomPaddings(_ sender: AnyObject) {
+        let alertVC = PMAlertController(title: "Locate your device", description: "Enables access to your location: discover what you can do when you're traveling and what is available near you.", image: UIImage(named: "flag.png"), style: .walkthrough) //Image by freepik.com, taken on flaticon.com
+        
+        
+        alertVC.headerViewTopSpaceConstraint.constant = 20
+        alertVC.alertContentStackViewLeadingConstraint.constant = 20
+        alertVC.alertContentStackViewTrailingConstraint.constant = 20
+        alertVC.alertContentStackViewTopConstraint.constant = 20
+        alertVC.alertActionStackViewLeadingConstraint.constant = 20
+        alertVC.alertActionStackViewTrailingConstraint.constant = 20
+        alertVC.alertActionStackViewTopConstraint.constant = 20
+        alertVC.alertActionStackViewBottomConstraint.constant = 20
+        alertVC.view.layoutIfNeeded()
+        
+        alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
+            print("Cancel")
+        }))
+        
+        alertVC.addAction(PMAlertAction(title: "Allow", style: .default, action: { () in
+            print("Allow")
+        }))
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
 }
