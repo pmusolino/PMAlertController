@@ -136,6 +136,12 @@ self.present(alertVC, animated: true, completion: nil)
 - If you use **Swift 2.2**, you can use the [release 1.0.5](https://github.com/pmusolino/PMAlertController/releases/tag/1.0.5)
 
 
+## Third Party Bindings
+
+### React Native
+You may now use this library with [React Native](https://github.com/facebook/react-native) via the module [here](https://github.com/prscX/react-native-styled-dialogs)
+
+
 ## Contributing
 
 - If you **need help** or you'd like to **ask a general question**, open an issue.
