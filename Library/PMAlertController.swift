@@ -40,8 +40,8 @@ import UIKit
     
     open var textFields: [UITextField] = []
     
-    open var gravityDismissAnimation = true
-    open var dismissWithBackgroudTouch = false // enable touch background to dismiss. Off by default.
+    @objc open var gravityDismissAnimation = true
+    @objc open var dismissWithBackgroudTouch = false // enable touch background to dismiss. Off by default.
     
     //MARK: - Lifecycle
     
