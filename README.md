@@ -1,14 +1,14 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/pmusolino/PMAlertController/master/logo_pmalertcontroller.png" alt="Icon"/>
 </p>
-  
- 
+
+
   [![Language](https://img.shields.io/badge/Swift-3%20%26%204-orange.svg)]()
   [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/pmusolino/PMAlertController/blob/master/LICENSE)
   [![Pod version](https://img.shields.io/cocoapods/v/PMAlertController.svg?style=flat)](https://cocoapods.org/pods/PMAlertController)
   [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-yellow.svg)](https://github.com/Carthage/Carthage)
   [![Downloads](https://img.shields.io/cocoapods/dt/PMAlertController.svg)](https://cocoapods.org/pods/PMAlertController)
-  
+
 
 PMAlertController is a small library that allows you to substitute Apple's uncustomizable `UIAlertController`, with a beautiful and totally customizable alert that you can use in your iOS app. Enjoy!
 
@@ -32,7 +32,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Carthage
 - [x] Animation with UIKit Dynamics
 - [x] Objective-C compatibility
-- [x] Swift 2.3, Swift 3 and Swift 4 support
+- [x] Swift 2.3, Swift 3, Swift 4, Swift 4.2 support
 - [ ] Swift Package Manager
 
 
@@ -112,15 +112,15 @@ let alertVC = PMAlertController(title: "A Title", description: "My Description",
 alertVC.addAction(PMAlertAction(title: "Cancel", style: .cancel, action: { () -> Void in
             print("Capture action Cancel")
         }))
-        
+
 alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: { () in
             print("Capture action OK")
         }))
-        
+
 alertVC.addTextField { (textField) in
             textField?.placeholder = "Location..."
         }
-        
+
 self.present(alertVC, animated: true, completion: nil)
 
 ```
