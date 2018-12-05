@@ -114,8 +114,8 @@ import UIKit
     }
 
     //MARK: - Text Fields
-    @objc open func addTextField(_ configuration: (_ textField: UITextField?) -> Void){
-        let textField = UITextField()
+    @objc open func addTextField(textField:UITextField? = nil, _ configuration: (_ textField: UITextField?) -> Void){
+        let textField = textField ?? UITextField()
         textField.delegate = self
         textField.returnKeyType = .done
         textField.font = UIFont(name: "Avenir-Heavy", size: 17)
