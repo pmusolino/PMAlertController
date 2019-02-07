@@ -152,8 +152,16 @@ You may now use this library with [React Native](https://github.com/facebook/rea
 
 ## Acknowledgements
 
-Made with ❤️ by [Paolo Musolino](https://github.com/pmusolino).
-The design is inspired by the [Musement App](https://itunes.apple.com/app/musement-tours-attractions/id828471190). The flag icon on the demo app is by [Freepik](http://freepik.com).
+**Made with ❤️ by [Paolo Musolino](https://github.com/pmusolino).**
+
+***Follow me on:***
+#### 💼 [Linkedin](https://www.linkedin.com/in/paolomusolino/)
+
+#### 🤖 [Twitter](https://twitter.com/pmusolino)
+
+#### 🌇 [Instagram](https://www.instagram.com/pmusolino/)
+
+#### 👨🏼‍🎤 [Facebook](https://www.facebook.com/paolomusolino)
 
 
 ## MIT License
