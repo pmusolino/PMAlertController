@@ -36,8 +36,6 @@ import UIKit
     @IBOutlet weak open var alertActionStackViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertActionStackViewBottomConstraint: NSLayoutConstraint!
     
-    open var alertStyle: PMAlertControllerStyle!
-    
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
@@ -86,8 +84,7 @@ import UIKit
         }
         
         //if alert width = 270, else width = screen width - 36
-        alertStyle = style
-        alertStyle == .alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.main.bounds.width - 36)
+        alertViewWidthConstraint.constant = (style == .alert) ? 270 : UIScreen.main.bounds.width - 36
         
         //Gesture recognizer for background dismiss with background touch
         let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(dismissAlertControllerFromBackgroundTap))
