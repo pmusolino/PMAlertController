@@ -129,7 +129,7 @@ self.present(alertVC, animated: true, completion: nil)
 
 - If you use **Swift 5.0 or higher**, you can use the [latest release](https://github.com/pmusolino/PMAlertController/releases).
 
-- If you use **Swift 4.0 or higher**, you can use the [release 3.5.0](https://github.com/pmusolino/PMAlertController/releases/tag/3.5.0).
+- If you use **Swift 4**, you can use the [release 3.5.0](https://github.com/pmusolino/PMAlertController/releases/tag/3.5.0).
 
 - If you use **Swift 3**, you can use the [release 2.1.3](https://github.com/pmusolino/PMAlertController/releases/tag/2.1.3).
 
