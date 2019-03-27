@@ -23,6 +23,7 @@ import UIKit
     @IBOutlet weak open var headerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak open var headerViewTopSpaceConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertImage: UIImageView!
+    @IBOutlet weak open var alertContentStackView: UIStackView!
     @IBOutlet weak open var alertTitle: UILabel!
     @IBOutlet weak open var alertDescription: UILabel!
     @IBOutlet weak open var alertContentStackViewLeadingConstraint: NSLayoutConstraint!
@@ -34,6 +35,8 @@ import UIKit
     @IBOutlet weak open var alertActionStackViewTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertActionStackViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertActionStackViewBottomConstraint: NSLayoutConstraint!
+    
+    open var alertStyle: PMAlertControllerStyle!
     
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
@@ -59,7 +62,7 @@ import UIKit
     
     
     //MARK: - Initialiser
-    @objc public convenience init(title: String, description: String, image: UIImage?, style: PMAlertControllerStyle) {
+    @objc public convenience init(title: String?, description: String?, image: UIImage?, style: PMAlertControllerStyle) {
         self.init()
         guard let nib = loadNibAlertController(), let unwrappedView = nib[0] as? UIView else { return }
         self.view = unwrappedView
@@ -69,12 +72,22 @@ import UIKit
         
         alertView.layer.cornerRadius = 5
         (image != nil) ? (alertImage.image = image) : (headerViewHeightConstraint.constant = 0)
-        alertTitle.text = title
-        alertDescription.text = description
         
+        if let title = title {
+            alertTitle.text = title
+        }else{
+            alertTitle.isHidden = true
+        }
+        
+        if let description = description {
+            alertDescription.text = description
+        }else{
+            alertDescription.isHidden = true
+        }
         
         //if alert width = 270, else width = screen width - 36
-        style == .alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.main.bounds.width - 36)
+        alertStyle = style
+        alertStyle == .alert ? (alertViewWidthConstraint.constant = 270) : (alertViewWidthConstraint.constant = UIScreen.main.bounds.width - 36)
         
         //Gesture recognizer for background dismiss with background touch
         let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(dismissAlertControllerFromBackgroundTap))
@@ -112,7 +125,7 @@ import UIKit
         self.animateDismissWithGravity(.cancel)
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     //MARK: - Text Fields
     @objc open func addTextField(textField:UITextField? = nil, _ configuration: (_ textField: UITextField?) -> Void){
         let textField = textField ?? UITextField()
