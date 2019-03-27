@@ -105,7 +105,7 @@ The usage is very similar to `UIAlertController`.
 #### Show a simple alert with two buttons and one textfield
 
 ```swift
-//This code works with Swift 4
+//This code works with Swift 5
 
 let alertVC = PMAlertController(title: "A Title", description: "My Description", image: UIImage(named: "img.png"), style: .alert)
 
