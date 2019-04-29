@@ -130,4 +130,26 @@ class ViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
+    @IBAction func showAlertWithNSAttributedTextEntry(_ sender: AnyObject) {
+        let attributedTitle = NSAttributedString(string: "Enter your device location", attributes: [
+                NSAttributedString.Key.font: UIFont(name: "American Typewriter", size: 18.0)!
+            ])
+        let attributedDescription = NSAttributedString(string: "If your device can't be found, you can manually enter its location, so our Sentinel Robots know where to find it", attributes: [
+                NSAttributedString.Key.font: UIFont(name: "American Typewriter", size: 18.0)!
+            ])
+        let alertVC = PMAlertController(attributedTitle: attributedTitle, attributedDescription: attributedDescription, image: UIImage(named: "flag.png"), style: .alert)
+        
+        
+        let cancelTitle = NSAttributedString(string: "Cancel", attributes: [                        NSAttributedString.Key.font: UIFont(name: "American Typewriter", size: 18.0)!
+            ])
+        alertVC.addAction(PMAlertAction(attributedTitle: cancelTitle, style: .cancel))
+        
+        let okTitle = NSAttributedString(string: "Ok", attributes: [                        NSAttributedString.Key.font: UIFont(name: "American Typewriter", size: 18.0)!
+            ])
+        alertVC.addAction(PMAlertAction(attributedTitle: okTitle, style: .default, action: { () in
+            print (alertVC.textFields[0].text ?? "")
+        }))
+        
+        self.present(alertVC, animated: true, completion: nil)
+    }
 }

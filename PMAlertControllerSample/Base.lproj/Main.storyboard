@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,11 +22,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lY-Kd-UGp">
-                                <rect key="frame" x="150" y="257.5" width="75" height="30"/>
+                                <rect key="frame" x="142" y="257.5" width="91" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="3hq-BU-ch7"/>
                                     <constraint firstAttribute="height" constant="30" id="995-LB-zET"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <state key="normal" title="Show Alert">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -87,7 +88,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAa-Tp-rp4">
-                                <rect key="frame" x="71" y="447.5" width="232" height="30"/>
+                                <rect key="frame" x="71.5" y="447.5" width="232" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gBq-9k-IRB"/>
                                     <constraint firstAttribute="height" constant="30" id="ooF-jr-ABn"/>
@@ -99,14 +100,29 @@
                                     <action selector="showWalkthroughWithCustomPaddings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QFg-3e-Krb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-DB-Faa">
+                                <rect key="frame" x="81" y="485.5" width="213" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="GVt-Lp-D87"/>
+                                    <constraint firstAttribute="height" constant="30" id="GqH-nc-8px"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert with Attributed Text">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertWithNSAttributedTextEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTH-hn-LF3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aCJ-yh-itC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5pH-xQ-WnV"/>
                             <constraint firstItem="9Tf-BW-og0" firstAttribute="top" secondItem="3jJ-qd-rp2" secondAttribute="bottom" constant="8" id="8Pr-Pu-5hK"/>
                             <constraint firstItem="3jJ-qd-rp2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="15" id="9fd-Tk-8mu"/>
+                            <constraint firstItem="GlZ-DB-Faa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AUN-pk-qSf"/>
                             <constraint firstItem="3jJ-qd-rp2" firstAttribute="top" secondItem="4HV-8v-2tv" secondAttribute="bottom" constant="8" id="GlX-Ff-iqn"/>
                             <constraint firstItem="BoA-fU-ZBo" firstAttribute="centerX" secondItem="aCJ-yh-itC" secondAttribute="centerX" id="OIZ-3n-yeZ"/>
+                            <constraint firstItem="GlZ-DB-Faa" firstAttribute="top" secondItem="dAa-Tp-rp4" secondAttribute="bottom" constant="8" id="PZe-FS-dQT"/>
                             <constraint firstItem="9Tf-BW-og0" firstAttribute="centerX" secondItem="WaF-QJ-Xl8" secondAttribute="centerX" id="h6x-7g-Wc3"/>
                             <constraint firstAttribute="bottom" secondItem="aCJ-yh-itC" secondAttribute="bottom" id="hKX-9R-uUt"/>
                             <constraint firstItem="BoA-fU-ZBo" firstAttribute="top" secondItem="9Tf-BW-og0" secondAttribute="bottom" constant="8" id="hnU-1N-1OM"/>
