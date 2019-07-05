@@ -19,15 +19,17 @@ import UIKit
     fileprivate var action: (() -> Void)?
     
     open var actionStyle : PMAlertActionStyle
+    open var autoDismiss : Bool
     
     open var separator = UIImageView()
     
     init(){
         self.actionStyle = .cancel
+        self.autoDismiss = true
         super.init(frame: CGRect.zero)
     }
     
-    @objc public convenience init(title: String?, style: PMAlertActionStyle, action: (() -> Void)? = nil){
+    @objc public convenience init(title: String?, style: PMAlertActionStyle, autoDismiss: Bool = true, action: (() -> Void)? = nil){
         self.init()
         
         self.action = action
@@ -39,6 +41,7 @@ import UIKit
         self.actionStyle = style
         style == .default ? (self.setTitleColor(UIColor(red: 191.0/255.0, green: 51.0/255.0, blue: 98.0/255.0, alpha: 1.0), for: UIControl.State())) : (self.setTitleColor(UIColor.gray, for: UIControl.State()))
         
+        self.autoDismiss = autoDismiss
         self.addSeparator()
     }
     
