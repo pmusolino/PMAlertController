@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/pmusolino"
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/pmusolino/PMAlertController.git", :tag => s.version }
-  s.source_files  = "Library/**/*"
+  s.source_files  = "Source/PMAlertController/**/*"
   s.resource_bundles = {
-    'PMAlertController' => ['Library/Resources/*.png', 'Library/**/*.xib']
+    'PMAlertController' => ['Source/PMAlertController/*.png', 'Source/PMAlertController/**/*.xib']
   }
   s.framework  = "UIKit"
   s.requires_arc = true

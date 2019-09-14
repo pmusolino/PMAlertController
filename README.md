@@ -33,7 +33,7 @@ PMAlertController is a small library that allows you to substitute Apple's uncus
 - [x] Animation with UIKit Dynamics
 - [x] Objective-C compatibility
 - [x] Swift 4, Swift 4.2 & Swift 5 support
-- [ ] Swift Package Manager
+- [x] Swift Package Manager
 
 
 ## Requirements
@@ -87,6 +87,31 @@ github "pmusolino/PMAlertController"
 ```
 
 Run `carthage update` to build the framework and drag the built `PMAlertController.framework` into your Xcode project.
+
+### [Swift Package Manager](https://github.com/apple/swift-package-manager)
+
+Create a `Package.swift` file.
+
+```swift
+// swift-tools-version:5.1
+
+import PackageDescription
+
+let package = Package(
+  name: "MyProject",
+  dependencies: [
+    .package(url: "https://github.com/pmusolino/PMAlertController.git", from: "master")
+  ],
+  targets: [
+    .target(name: "MyProject", dependencies: ["PMAlertController"])
+  ]
+)
+```
+
+```bash
+$ swift build
+```
+
 
 ## Manually
 ----------------
