@@ -13,6 +13,11 @@ import UIKit
     case walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
 }
 
+@objc public enum PMAlertControllerPreferredStatusBarStyle: Int {
+    case light
+    case normal
+}
+
 @objc open class PMAlertController: UIViewController {
     
     // MARK: Properties
@@ -41,6 +46,20 @@ import UIKit
     
     open var textFields: [UITextField] = []
     
+    var statusStyle: PMAlertControllerPreferredStatusBarStyle = .normal {
+        didSet {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        switch statusStyle {
+            case .normal:
+                return UIStatusBarStyle.default
+            case .light:
+                return UIStatusBarStyle.lightContent
+        }
+    }
+    
     @objc open var gravityDismissAnimation = true
     @objc open var dismissWithBackgroudTouch = false // enable touch background to dismiss. Off by default.
     
@@ -60,11 +79,11 @@ import UIKit
     
     
     //MARK: - Initialiser
-    @objc public convenience init(title: String?, description: String?, image: UIImage?, style: PMAlertControllerStyle) {
+    @objc public convenience init(title: String?, description: String?, image: UIImage?, style: PMAlertControllerStyle, statusBarStyle: PMAlertControllerPreferredStatusBarStyle) {
         self.init()
         guard let nib = loadNibAlertController(), let unwrappedView = nib[0] as? UIView else { return }
         self.view = unwrappedView
-        
+        self.statusStyle = statusBarStyle
         self.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         self.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
