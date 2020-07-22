@@ -39,7 +39,7 @@ import UIKit
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     
-    open var textFields: [UITextField] = []
+    @objc open var textFields: [UITextField] = []
     
     @objc open var gravityDismissAnimation = true
     @objc open var dismissWithBackgroudTouch = false // enable touch background to dismiss. Off by default.
