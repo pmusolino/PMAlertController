@@ -19,8 +19,7 @@ let package = Package(
         .target(
             name: "PMAlertController",
             dependencies: [],
-            path:"Library",
-            resources: [.process("PMAlertController.xib")]
+            path:"Library"
         )
     ]
 )
