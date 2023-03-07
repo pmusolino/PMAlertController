@@ -164,6 +164,13 @@ import UIKit
                 assertionFailure("Could not load the bundle")
             }
             
+        }else  if let bundleURL = Bundle.module.url(forResource: "PMAlertController", withExtension: "bundle"){
+            if let bundle = Bundle(url: bundleURL) {
+                return bundle.loadNibNamed("PMAlertController", owner: self, options: nil) as [AnyObject]?
+            }
+
+        }else if let nib = Bundle.module.loadNibNamed("PMAlertController", owner: self, options: nil) as [AnyObject]?{
+            return nib
         }
         else if let nib = podBundle.loadNibNamed("PMAlertController", owner: self, options: nil) as [AnyObject]?{
             return nib
