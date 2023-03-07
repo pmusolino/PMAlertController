@@ -106,7 +106,14 @@ import UIKit
             alertActionStackView.axis = .horizontal
         }
         
-        alertAction.addTarget(self, action: #selector(PMAlertController.dismissAlertController(_:)), for: .touchUpInside)
+        if alertAction.autoDismiss {
+            alertAction.addTarget(self, action: #selector(PMAlertController.dismissAlertController(_:)), for: .touchUpInside)
+        }
+    }
+    
+    @objc open func dismiss(animated: Bool, style: PMAlertActionStyle) {
+        self.animateDismissWithGravity(style)
+        self.dismiss(animated: animated, completion: nil)
     }
     
     @objc fileprivate func dismissAlertController(_ sender: PMAlertAction){

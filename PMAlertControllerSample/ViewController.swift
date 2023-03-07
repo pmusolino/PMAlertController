@@ -30,9 +30,11 @@ class ViewController: UIViewController {
             print("Cancel")
         }))
         
-        alertVC.addAction(PMAlertAction(title: "Allow", style: .default, action: { () in
+        let allowAction = PMAlertAction(title: "Allow", style: .default, autoDismiss: false, action: { () in
             print("Allow")
-        }))
+            alertVC.dismiss(animated: true, style: .default)
+        })
+        alertVC.addAction(allowAction)
         
         self.present(alertVC, animated: true, completion: nil)
     }
