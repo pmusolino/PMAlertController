@@ -5,7 +5,7 @@
 
   [![Language](https://img.shields.io/badge/Swift-4%20%26%205-orange.svg)]()
   [![GitHub license](https://img.shields.io/cocoapods/l/PMAlertController.svg)](https://github.com/pmusolino/PMAlertController/blob/master/LICENSE)
-  [![Pod version](https://img.shields.io/cocoapods/v/PMAlertController.svg?style=flat)](https://cocoapods.org/pods/PMAlertController)
+  [![Pod version](https://img.shields.io/badge/Cocoapods-compatible%20-blue)](https://cocoapods.org/pods/PMAlertController)
   [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-yellow.svg)](https://github.com/Carthage/Carthage)
   [![Downloads](https://img.shields.io/cocoapods/dt/PMAlertController.svg)](https://cocoapods.org/pods/PMAlertController)
 
