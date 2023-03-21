@@ -60,8 +60,7 @@ import UIKit
     
     
     //MARK: - Initialiser
-    @objc public convenience init(title: String?, description: String?, image: UIImage?, style: PMAlertControllerStyle) {
-        self.init()
+    private func commonInit(image: UIImage?, style: PMAlertControllerStyle) {
         guard let nib = loadNibAlertController(), let unwrappedView = nib[0] as? UIView else { return }
         self.view = unwrappedView
         
@@ -70,6 +69,20 @@ import UIKit
         
         alertView.layer.cornerRadius = 5
         (image != nil) ? (alertImage.image = image) : (headerViewHeightConstraint.constant = 0)
+        
+        //if alert width = 270, else width = screen width - 36
+        alertViewWidthConstraint.constant = (style == .alert) ? 270 : UIScreen.main.bounds.width - 36
+        
+        //Gesture recognizer for background dismiss with background touch
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(dismissAlertControllerFromBackgroundTap))
+        alertMaskBackground.addGestureRecognizer(tapRecognizer)
+        
+        setShadowAlertView()
+    }
+    
+    @objc public convenience init(title: String?, description: String?, image: UIImage?, style: PMAlertControllerStyle) {
+        self.init()
+        commonInit(image: image, style: style)
         
         if let title = title {
             alertTitle.text = title
@@ -82,15 +95,23 @@ import UIKit
         }else{
             alertDescription.isHidden = true
         }
+    }
+    
+    @objc public convenience init(attributedTitle: NSAttributedString?, attributedDescription: NSAttributedString?, image: UIImage?, style: PMAlertControllerStyle) {
+        self.init()
+        self.commonInit(image: image, style: style)
         
-        //if alert width = 270, else width = screen width - 36
-        alertViewWidthConstraint.constant = (style == .alert) ? 270 : UIScreen.main.bounds.width - 36
+        if let title = attributedTitle {
+            alertTitle.attributedText = title
+        }else{
+            alertTitle.isHidden = true
+        }
         
-        //Gesture recognizer for background dismiss with background touch
-        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(dismissAlertControllerFromBackgroundTap))
-        alertMaskBackground.addGestureRecognizer(tapRecognizer)
-        
-        setShadowAlertView()
+        if let description = attributedDescription {
+            alertDescription.attributedText = description
+        }else{
+            alertDescription.isHidden = true
+        }
     }
     
     //MARK: - Actions
